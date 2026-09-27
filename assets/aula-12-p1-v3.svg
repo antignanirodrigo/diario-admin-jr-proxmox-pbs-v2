@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 12, prancha 1: incidente e diagnóstico da porta 8006</title>
+  <desc id="desc">Seis quadros mostram a falha de acesso, as quatro verificações, os limites das provas locais, a fonte incorreta no firewall e o plano de correção ainda pendente.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-12-p1-base-v3.png"/>
+  <g fill="#f7fbff" stroke="#061420" stroke-width="4">
+    <rect x="14" y="9" width="475" height="77" rx="4"/><rect x="527" y="9" width="475" height="77" rx="4"/><rect x="1039" y="9" width="475" height="77" rx="4"/>
+    <rect x="14" y="521" width="475" height="77" rx="4"/><rect x="527" y="521" width="475" height="77" rx="4"/><rect x="1039" y="521" width="475" height="77" rx="4"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#081927">
+    <text x="29" y="41"><tspan>1. Da 10.10.10.0/24, la GUI di</tspan><tspan x="29" dy="31">pve02:8006 non si apre.</tspan></text>
+    <text x="542" y="41"><tspan>2. Quattro prove: nome, route,</tspan><tspan x="542" dy="31">ascolto locale e firewall.</tspan></text>
+    <text x="1054" y="41"><tspan>3. Nome e route locali sono</tspan><tspan x="1054" dy="31">coerenti: non provano l’accesso.</tspan></text>
+    <text x="29" y="553"><tspan>4. TCP 8006 è in ascolto sul nodo;</tspan><tspan x="29" dy="31">l’accesso remoto resta da verificare.</tspan></text>
+    <text x="542" y="553"><tspan>5. La regola permette gli utenti</tspan><tspan x="542" dy="31">10.10.30.0/24, non la gestione.</tspan></text>
+    <text x="1054" y="553"><tspan>6. Proponiamo la fonte corretta;</tspan><tspan x="1054" dy="31">modifica e test sono pendenti.</tspan></text>
+  </g>
+</svg>
