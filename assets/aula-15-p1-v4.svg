@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 15, tavola 1: misurare prima di aumentare la RAM</title>
+  <desc id="desc">Sei scene differenti mostrano il ticket di importazione lenta, la misura separata di CPU, RAM e disco e una modifica di RAM ancora proposta.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-15-p1-base-v3.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M303 80 L263 139 L352 91 Z"/><ellipse cx="381" cy="49" rx="118" ry="45"/>
+    <path d="M738 80 L701 120 L793 91 Z"/><ellipse cx="861" cy="49" rx="149" ry="45"/>
+    <path d="M1211 582 L1162 667 L1298 596 Z"/><ellipse cx="1329" cy="557" rx="174" ry="46"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="600" fill="#081927" text-anchor="middle">
+    <text x="381" y="43"><tspan>Importazione lenta.</tspan><tspan x="381" dy="25">Aumento tutto?</tspan></text>
+    <text x="861" y="42"><tspan>Misuriamo CPU, RAM</tspan><tspan x="861" dy="25">e disco separati.</tspan></text>
+    <text x="1329" y="550"><tspan>Solo RAM a 4096 MiB.</tspan><tspan x="1329" dy="25">Poi rimisuriamo.</tspan></text>
+  </g>
+  <rect x="148" y="513" width="353" height="80" rx="12" fill="#0a263e" stroke="#8fe3ff" stroke-width="2.5"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#fff" text-anchor="middle">
+    <text x="324" y="536" font-size="14" font-weight="800" fill="#7fe0ff">DATI DEL GUEST</text>
+    <text x="324" y="559" font-size="18" font-weight="600"><tspan>120 MiB disponibili;</tspan><tspan x="324" dy="23">swap usata: 1250 MiB.</tspan></text>
+  </g>
+  <rect x="542" y="514" width="476" height="79" rx="12" fill="#0a263e" stroke="#8fe3ff" stroke-width="2.5"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#fff" text-anchor="middle">
+    <text x="780" y="537" font-size="14" font-weight="800" fill="#7fe0ff">NOTA TECNICA</text>
+    <text x="780" y="560" font-size="19" font-weight="600"><tspan>memory e balloon sono entrambi</tspan><tspan x="780" dy="23">2048 MiB: limite fisso qui.</tspan></text>
+  </g>
+  <rect x="1054" y="9" width="451" height="80" rx="12" fill="#0a263e" stroke="#8fe3ff" stroke-width="2.5"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#fff" text-anchor="middle">
+    <text x="1280" y="31" font-size="14" font-weight="800" fill="#7fe0ff">NOTA TECNICA</text>
+    <text x="1280" y="56" font-size="19" font-weight="600"><tspan>22 vCPU su 16 thread:</tspan><tspan x="1280" dy="23">non prova contesa.</tspan></text>
+  </g>
+</svg>

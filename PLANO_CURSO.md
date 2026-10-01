@@ -1,6 +1,6 @@
 # Plano curricular — Proxmox VE + Proxmox Backup Server
 
-**Estado:** planejamento editorial em português; aulas 01–12 produzidas como protótipo interativo em italiano, com 24 pranchas. Aulas 13–48 permanecem planejadas.  
+**Estado:** planejamento editorial em português; aulas 01–17 produzidas como protótipo interativo em italiano, com 34 pranchas. Aulas 18–48 permanecem planejadas.  
 **Carga proposta:** 48 aulas em 12 módulos de 4; 32 aulas de Proxmox VE e infraestrutura, 16 aulas de PBS, backup e recuperação.  
 **Referência técnica inicial:** Proxmox VE 9.2 e Proxmox Backup Server 4.2, conferidos em setembro de 2026. Versões, comandos e telas devem ser reconferidos antes de cada lote de produção.  
 **Formato previsto por aula:** chamado narrativo, conceito, laboratório interativo com consequência observável, decisão técnica, 3 questões comentadas, diário de bordo e **2 pranchas**. A primeira prancha apresenta o incidente; a segunda mostra investigação, correção e evidência de validação. Meta editorial: 96 pranchas e 144 questões.

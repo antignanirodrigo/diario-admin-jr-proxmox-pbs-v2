@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 13, prancha 1: la VM 210 non avvia la ISO interna</title>
+  <desc id="desc">Sei quadri introducono la VM non avviabile, il profilo UEFI, la ISO presente, la configurazione difforme, i due percorsi tecnici e il piano ancora da applicare.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-13-p1-base-v2.png"/>
+  <g fill="#f7fbff" stroke="#061420" stroke-width="4">
+    <rect x="14" y="9" width="475" height="77" rx="4"/><rect x="527" y="9" width="475" height="77" rx="4"/><rect x="1039" y="9" width="475" height="77" rx="4"/>
+    <rect x="14" y="521" width="475" height="77" rx="4"/><rect x="527" y="521" width="475" height="77" rx="4"/><rect x="1039" y="521" width="475" height="77" rx="4"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#081927">
+    <text x="29" y="41"><tspan>1. La VM 210 non avvia la ISO</tspan><tspan x="29" dy="31">Linux interna: qual è la causa?</tspan></text>
+    <text x="542" y="41"><tspan>2. Il profilo interno richiede</tspan><tspan x="542" dy="31">UEFI/OVMF e un disco EFI.</tspan></text>
+    <text x="1054" y="41"><tspan>3. La ISO approvata è presente;</tspan><tspan x="1054" dy="31">questo non dimostra il boot.</tspan></text>
+    <text x="29" y="553"><tspan>4. La bozza usa SeaBIOS, 1 vCPU,</tspan><tspan x="29" dy="31">2048 MiB e vmbr9.</tspan></text>
+    <text x="542" y="553"><tspan>5. Firmware e rete sono due</tspan><tspan x="542" dy="31">percorsi da verificare separati.</tspan></text>
+    <text x="1054" y="553"><tspan>6. Confrontiamo la bozza col</tspan><tspan x="1054" dy="31">profilo prima di modificare.</tspan></text>
+  </g>
+</svg>
+

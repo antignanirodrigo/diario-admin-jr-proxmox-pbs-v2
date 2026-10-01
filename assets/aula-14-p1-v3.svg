@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 14, tavola 1: il campo IP vuoto non prova una rete guasta</title>
+  <desc id="desc">Sei quadri distinguono il sintomo nella GUI, il controller del disco, il canale Guest Agent e le verifiche ancora da fare nel guest.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-14-p1-base-v1.png"/>
+  <!-- Neutralize the generated green status indicator: service state is not yet proven. -->
+  <circle cx="903" cy="787" r="15" fill="#153550" stroke="#a8bdca" stroke-width="3"/>
+  <text x="903" y="795" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#e2edf4">?</text>
+  <g fill="#f7fbff" stroke="#061420" stroke-width="4" stroke-linejoin="round">
+    <path d="M14 9 H489 V86 H169 L148 108 L137 86 H14 Z"/>
+    <path d="M527 9 H1002 V86 H679 L653 108 L637 86 H527 Z"/>
+    <path d="M1039 9 H1514 V86 H1461 L1435 108 L1425 86 H1039 Z"/>
+    <path d="M14 521 H489 V598 H169 L139 621 L128 598 H14 Z"/>
+    <path d="M527 521 H1002 V598 H674 L644 621 L632 598 H527 Z"/>
+    <path d="M1039 521 H1514 V598 H1192 L1165 621 L1150 598 H1039 Z"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#081927">
+    <text x="29" y="41"><tspan>«L'IP non appare in PVE.</tspan><tspan x="29" dy="31">È la rete a non funzionare?»</tspan></text>
+    <text x="542" y="41"><tspan>«Disco, agente e rete sono</tspan><tspan x="542" dy="31">tre sistemi distinti.»</tspan></text>
+    <text x="1054" y="41"><tspan>«agent: 1 è lato PVE.</tspan><tspan x="1054" dy="31">E dentro il guest?»</tspan></text>
+    <text x="29" y="553"><tspan>«Controllo servizio, pacchetto,</tspan><tspan x="29" dy="31">IP e disco nel guest.»</tspan></text>
+    <text x="542" y="553"><tspan>«Configurato non significa</tspan><tspan x="542" dy="31">che il servizio sia attivo.»</tspan></text>
+    <text x="1054" y="553"><tspan>«Prima le prove. net0</tspan><tspan x="1054" dy="31">non si tocca ancora.»</tspan></text>
+  </g>
+</svg>

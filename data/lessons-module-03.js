@@ -157,6 +157,6 @@ export const module03 = [
     validation: 'La GUI ascolta, il nome risolve e la route esiste. La policy simulata permette per errore la rete utenti; la scelta minima è correggere la fonte. I test remoti restano pendenti.',
     diaryPrompt: 'Registra le quattro prove, la fonte errata, quella corretta e il risultato atteso dai due client di test.',
     closing: 'Hai concluso il modulo distinguendo connettività e autorizzazione. Il prossimo modulo inizierà la creazione consapevole delle VM KVM.',
-    images: ['assets/aula-12.png', 'assets/aula-12-p2-v2.png']
+    images: ['assets/aula-12-p1-v3.png', 'assets/aula-12-p2-v4.png']
   }
 ];

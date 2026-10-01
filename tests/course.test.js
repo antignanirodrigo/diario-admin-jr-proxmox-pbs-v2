@@ -6,8 +6,8 @@ import { lessons } from '../data/lessons.js';
 import { getCommandGuide } from '../data/command-guide.js';
 import { newLessonState, runCommand, autocomplete, selectArchitecture, validateLab, answerQuiz, makeDecision, canComplete, completeLesson } from '../js/simulator.js';
 
-test('I primi tre moduli contengono dodici lezioni italiane con due tavole e tre domande ciascuna', () => {
-  assert.deepEqual(lessons.map(item => item.id), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+test('Le lezioni attive hanno due tavole e tre domande ciascuna', () => {
+  assert.deepEqual(lessons.map(item => item.id), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]);
   for (const lesson of lessons) {
     assert.equal(lesson.images.length, 2);
     for (const path of lesson.images) assert.ok(existsSync(new URL(`../${path}`, import.meta.url)), `${lesson.id}: prancha ${path}`);
@@ -21,7 +21,7 @@ test('I primi tre moduli contengono dodici lezioni italiane con due tavole e tre
 
 test('Le tavole del nuovo modulo hanno formato coerente e file distinti', () => {
   const hashes = new Set();
-  for (const lesson of lessons.filter(item => item.id >= 9 && item.id <= 12)) {
+  for (const lesson of lessons.filter(item => item.id >= 9 && item.id <= 18)) {
     for (const path of lesson.images) {
       const png = readFileSync(new URL(`../${path}`, import.meta.url));
       assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', `${path}: PNG valido`);
@@ -78,6 +78,77 @@ test('Cambiare una scelta dopo la convalida invalida il laboratorio', () => {
   assert.equal(s.labVerified, false);
 });
 
+test('Lezione 14: diagnosi prima dell’intervento e stato coerente dopo l’avvio', () => {
+  const lesson = lessons.find(item => item.id === 14);
+  const state = newLessonState(14);
+  const byKey = Object.fromEntries(lesson.lab.commands.map(item => [item.key, item]));
+  const execute = key => runCommand(state, byKey[key].host, byKey[key].input);
+  assert.equal(execute('startAgent').ok, false);
+  assert.equal(execute('activeAgent').ok, false);
+  assert.equal(execute('agentPing').ok, false);
+  assert.equal(state.seen.length, 0);
+  for (const key of ['config', 'status', 'agentService', 'guestIp', 'disk', 'package']) assert.equal(execute(key).ok, true);
+  assert.equal(execute('agentService').output, 'inactive');
+  assert.equal(execute('startAgent').ok, true);
+  assert.equal(execute('agentService').output, 'active');
+  assert.equal(execute('activeAgent').output, 'ActiveState=active');
+  assert.equal(execute('agentPing').ok, true);
+  assert.match(execute('agentIp').output, /10\.10\.10\.21/);
+});
+
+test('Lezione 15: letture e stato restano coerenti prima, durante e dopo la modifica RAM', () => {
+  const lesson = lessons.find(item => item.id === 15);
+  const state = newLessonState(15);
+  const byKey = Object.fromEntries(lesson.lab.commands.map(item => [item.key, item]));
+  const execute = key => runCommand(state, byKey[key].host, byKey[key].input);
+  assert.equal(execute('setMemory').ok, false);
+  assert.match(execute('hostMemory').output, /28Gi/);
+  for (const key of ['config', 'status', 'capacity', 'storage', 'load', 'guestMemory', 'paging', 'guestDisk']) assert.equal(execute(key).ok, true, key);
+  assert.equal(execute('shutdown').ok, true);
+  assert.equal(state.runtime.vm212, 'stopped');
+  assert.match(execute('hostMemory').output, /30Gi/);
+  assert.equal(execute('paging').ok, false, 'Il guest fermo non risponde');
+  assert.equal(execute('stopConfirmed').ok, true);
+  assert.equal(execute('setMemory').ok, true);
+  assert.equal(state.runtime.ramMiB, 4096);
+  assert.equal(execute('startVm').ok, true);
+  assert.match(execute('hostMemory').output, /26Gi/);
+  assert.match(execute('load').output, /up 2 min/);
+  assert.match(execute('guestMemory').output, /3909/);
+  assert.match(execute('paging').output, /1800000/);
+  assert.match(execute('paging').output, /  0  0 /);
+  assert.equal(execute('configAfter').ok, true);
+  assert.equal(execute('guestAfter').ok, true);
+  assert.deepEqual(state.runtime, lesson.lab.expectedRuntime);
+});
+
+test('Lezione 16: pulizia, shutdown, template, clone isolato e snapshot rispettano gli stati', () => {
+  const lesson = lessons.find(item => item.id === 16);
+  const state = newLessonState(16);
+  const byKey = Object.fromEntries(lesson.lab.commands.map(item => [item.key, item]));
+  const execute = key => runCommand(state, byKey[key].host, byKey[key].input);
+  assert.equal(execute('shutdown').ok, false);
+  assert.equal(execute('template').ok, false);
+  assert.equal(execute('clone').ok, false);
+  assert.equal(execute('snapshot').ok, false);
+  for (const key of ['baseConfig', 'baseStatus', 'readiness', 'storage']) assert.equal(execute(key).ok, true, key);
+  assert.equal(execute('shutdown').ok, false, 'Il machine-id deve essere pulito prima');
+  assert.equal(execute('cleanIdentity').ok, true);
+  assert.equal(execute('machineId').output, 'uninitialized');
+  assert.equal(execute('shutdown').ok, true);
+  assert.equal(execute('stopped').ok, true);
+  assert.equal(execute('template').ok, true);
+  assert.match(execute('templateConfig').output, /template: 1/);
+  assert.equal(execute('clone').ok, true);
+  assert.match(execute('cloneConfig').output, /link_down=1/);
+  assert.equal(execute('startClone').ok, true);
+  assert.equal(execute('cloneStatus').output, 'status: running');
+  assert.equal(execute('snapshot').ok, true);
+  assert.match(execute('snapshotList').output, /pre-update/);
+  assert.match(execute('backupInventory').output, /assente/);
+  assert.deepEqual(state.runtime, lesson.lab.expectedRuntime);
+});
+
 test('Ogni comando spiega sintassi, output e aiuto; consultare aiuto non crea evidenza', () => {
   for (const lesson of lessons) {
     const s = newLessonState(lesson.id);
@@ -99,7 +170,8 @@ test('Ogni comando spiega sintassi, output e aiuto; consultare aiuto non crea ev
 
 test('TAB completa solo comandi del nodo; help e --help non spuntano obiettivi', () => {
   const s = newLessonState(1);
-  assert.equal(autocomplete(1, 'pve01', 'pvev').line, 'pveversion -v');
+  assert.equal(autocomplete(1, 'pve01', 'pvev').line, 'pveversion ');
+  assert.equal(autocomplete(1, 'pve01', 'pveversion ').line, 'pveversion -v');
   assert.equal(autocomplete(1, 'pve01', 'proxmox-').matches.length, 0);
   assert.equal(autocomplete(1, 'pbs01', 'proxmox-backup-manager v').line, 'proxmox-backup-manager versions');
   assert.equal(runCommand(s, 'pve01', 'help').help, true);

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 15, tavola 2: una modifica, verifica parziale e latenza da misurare</title>
+  <desc id="desc">Sei quadri mostrano inventario, campioni del guest, disco escluso, shutdown ordinato, RAM virtuale configurata e prova di latenza ancora pendente.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-15-p2-base-v3.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M311 81 L251 166 L378 91 Z"/><ellipse cx="393" cy="49" rx="109" ry="46"/>
+    <path d="M754 80 L660 148 L824 91 Z"/><ellipse cx="873" cy="49" rx="132" ry="46"/>
+    <path d="M1258 889 L1185 759 L1284 889 Z"/><ellipse cx="1350" cy="927" rx="157" ry="47"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="#081927" text-anchor="middle">
+    <text x="393" y="41"><tspan>VM 212: 2 vCPU,</tspan><tspan x="393" dy="24">2048 MiB di RAM.</tspan></text>
+    <text x="873" y="41"><tspan>free -m e vmstat:</tspan><tspan x="873" dy="24">paging nel carico.</tspan></text>
+    <text x="1350" y="920"><tspan>RAM riconosciuta.</tspan><tspan x="1350" dy="24">Latenza? Da misurare.</tspan></text>
+  </g>
+  <g fill="#0a263e" stroke="#8fe3ff" stroke-width="2.5">
+    <rect x="1047" y="9" width="465" height="81" rx="12"/>
+    <rect x="20" y="929" width="477" height="80" rx="12"/>
+    <rect x="542" y="512" width="476" height="80" rx="12"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#fff" text-anchor="middle">
+    <text x="1280" y="31" font-size="14" font-weight="800" fill="#7fe0ff">DISCO ESCLUSO</text>
+    <text x="1280" y="55" font-size="18" font-weight="600"><tspan>Guest / al 50%; local-lvm</tspan><tspan x="1280" dy="23">ha 560G disponibili.</tspan></text>
+    <text x="259" y="952" font-size="14" font-weight="800" fill="#7fe0ff">AZIONE SIMULATA</text>
+    <text x="259" y="976" font-size="18" font-weight="600"><tspan>Shutdown ordinato:</tspan><tspan x="259" dy="23">VM 212 in stato stopped.</tspan></text>
+    <text x="780" y="535" font-size="14" font-weight="800" fill="#7fe0ff">UN SOLO PARAMETRO</text>
+    <text x="780" y="560" font-size="18" font-weight="600"><tspan>memory = balloon = 4096 MiB.</tspan><tspan x="780" dy="23">CPU e disco invariati.</tspan></text>
+  </g>
+</svg>

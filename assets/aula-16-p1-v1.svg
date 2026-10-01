@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 16, tavola 1: template, clone, snapshot e backup hanno scopi diversi</title>
+  <desc id="desc">Sei quadri con i personaggi canonici. Una richiesta QA porta a preparare l'identità, distinguere clone completo e snapshot locale da backup esterno ancora da fare.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-16-p1-base-v1.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M249 74 L169 145 L308 93 Z"/><ellipse cx="357" cy="53" rx="149" ry="51"/>
+    <path d="M790 75 L770 140 L835 94 Z"/><ellipse cx="852" cy="53" rx="155" ry="51"/>
+    <path d="M1115 74 L1054 145 L1180 93 Z"/><ellipse cx="1350" cy="53" rx="177" ry="51"/>
+    <path d="M267 576 L163 651 L322 596 Z"/><ellipse cx="355" cy="555" rx="149" ry="51"/>
+    <path d="M786 576 L743 737 L825 597 Z"/><ellipse cx="851" cy="555" rx="157" ry="51"/>
+    <path d="M1501 579 L1516 796 L1526 595 Z"/><ellipse cx="1350" cy="555" rx="179" ry="51"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="600" fill="#081927" text-anchor="middle">
+    <text x="357" y="47"><tspan>Uno snapshot basta</tspan><tspan x="357" dy="27">se perdiamo il nodo?</tspan></text>
+    <text x="852" y="47"><tspan>Template, clone, snapshot:</tspan><tspan x="852" dy="27">tre funzioni diverse.</tspan></text>
+    <text x="1350" y="47"><tspan>La base 230 è attiva.</tspan><tspan x="1350" dy="27">La rete resta scollegata.</tspan></text>
+    <text x="355" y="549"><tspan>Pulisco cloud-init</tspan><tspan x="355" dy="27">e machine-id. Poi spengo.</tspan></text>
+    <text x="851" y="549"><tspan>Clone completo: disco suo.</tspan><tspan x="851" dy="27">Resta sul nodo.</tspan></text>
+    <text x="1350" y="549"><tspan>Snapshot locale.</tspan><tspan x="1350" dy="27">Backup esterno da fare.</tspan></text>
+  </g>
+</svg>

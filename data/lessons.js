@@ -1,5 +1,7 @@
 import { module02 } from './lessons-module-02.js';
 import { module03 } from './lessons-module-03.js';
+import { module04 } from './lessons-module-04.js';
+import { module05 } from './lessons-module-05.js';
 
 export const lessons = [
   {
@@ -208,7 +210,9 @@ export const lessons = [
     images: ['assets/aula-04.png', 'assets/aula-04-p2-hq-v2.png']
   },
   ...module02,
-  ...module03
+  ...module03,
+  ...module04,
+  ...module05
 ];
 
 export const getLesson = id => lessons.find(lesson => lesson.id === Number(id));

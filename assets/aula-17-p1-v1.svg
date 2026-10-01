@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 17, tavola 1: scegliere il confine per tre servizi</title>
+  <desc id="desc">Tre richieste vengono distinte per sistema operativo e isolamento. LXC condivide il kernel Linux, mentre Windows e Docker nel caso vanno in VM. Nessuna istanza è ancora creata.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-17-p1-base-v1.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M1217 77 L1184 173 L1308 85 Z"/><ellipse cx="1353" cy="43" rx="160" ry="42"/>
+    <path d="M1286 900 L1320 816 L1331 900 Z"/><ellipse cx="1352" cy="941" rx="161" ry="43"/>
+    <path d="M124 905 L136 744 L164 905 Z"/><ellipse cx="248" cy="945" rx="184" ry="42"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="#081927" text-anchor="middle">
+    <text x="1353" y="38"><tspan>Per Windows</tspan><tspan x="1353" dy="23">serve una VM.</tspan></text>
+    <text x="1352" y="935"><tspan>Piano scelto.</tspan><tspan x="1352" dy="23">Nessuna istanza creata.</tspan></text>
+    <text x="248" y="939"><tspan>B: LXC non privilegiato.</tspan><tspan x="248" dy="23">Prima facciamo i test.</tspan></text>
+  </g>
+  <g fill="#0a263e" stroke="#8fe3ff" stroke-width="2.5">
+    <rect x="544" y="9" width="473" height="82" rx="12"/>
+    <rect x="21" y="410" width="475" height="75" rx="12"/>
+    <rect x="548" y="515" width="468" height="79" rx="12"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#fff" text-anchor="middle">
+    <text x="780" y="32" font-size="14" font-weight="800" fill="#7fe0ff">DUE CONFINI DIVERSI</text>
+    <text x="780" y="55" font-size="18" font-weight="600"><tspan>LXC usa il kernel Linux del nodo.</tspan><tspan x="780" dy="23">La VM ha un kernel ospite.</tspan></text>
+    <text x="259" y="432" font-size="14" font-weight="800" fill="#7fe0ff">TICKET INF-117</text>
+    <text x="259" y="461" font-size="19" font-weight="600">Tre servizi, tre verifiche.</text>
+    <text x="782" y="538" font-size="14" font-weight="800" fill="#7fe0ff">CASO C</text>
+    <text x="782" y="568" font-size="20" font-weight="600">Docker/OCI: VM raccomandata.</text>
+  </g>
+</svg>

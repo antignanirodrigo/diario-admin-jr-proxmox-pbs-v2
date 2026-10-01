@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 18, tavola 1: preparare un LXC non privilegiato</title>
+  <desc id="desc">Capacità di local, template, rootfs separato, scelta non privilegiata e CT 301 ancora fermo.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-18-p1-base-v1.png"/>
+  <g fill="#fffdf8" stroke="#0b1b2b" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M812 61 L766 145 L863 81 Z"/><ellipse cx="891" cy="46" rx="117" ry="42"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#081927" font-size="18" font-weight="700" text-anchor="middle">
+    <text x="891" y="41"><tspan>Prima leggo</tspan><tspan x="891" dy="22">il catalogo.</tspan></text>
+  </g>
+  <g fill="#0a263e" stroke="#8fe3ff" stroke-width="2.5">
+    <rect x="18" y="391" width="478" height="79" rx="11"/>
+    <rect x="1049" y="24" width="469" height="63" rx="11"/>
+    <rect x="1048" y="392" width="470" height="79" rx="11"/>
+    <rect x="20" y="895" width="476" height="112" rx="11"/>
+    <rect x="545" y="925" width="470" height="79" rx="11"/>
+    <rect x="1050" y="920" width="468" height="84" rx="11"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#fff" text-anchor="middle" font-weight="700">
+    <text x="257" y="415" font-size="14" fill="#80e0ff">PRIMA DEL DOWNLOAD</text>
+    <text x="257" y="447" font-size="21">local: 1G libero</text>
+    <text x="1283" y="63" font-size="19">Template su local</text>
+    <text x="1283" y="415" font-size="14" fill="#80e0ff">VOLUME SEPARATO</text>
+    <text x="1283" y="446" font-size="19">rootfs 8G su local-lvm</text>
+    <text x="258" y="921" font-size="14" fill="#80e0ff">CT 301 · IDENTITÀ LIMITATA</text>
+    <text x="258" y="955" font-size="21">--unprivileged 1</text>
+    <text x="258" y="984" font-size="17">UID/GID mappati sull’host</text>
+    <text x="780" y="948" font-size="14" fill="#80e0ff">PRIMA DI AVVIARE</text>
+    <text x="780" y="979" font-size="18">Controlla config e rete.</text>
+    <text x="1284" y="943" font-size="14" fill="#80e0ff">DOPO LA CREAZIONE</text>
+    <text x="1284" y="975" font-size="20">CT 301: stopped</text>
+  </g>
+</svg>

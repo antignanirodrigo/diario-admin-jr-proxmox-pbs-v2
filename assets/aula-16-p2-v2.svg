@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 16, tavola 2: verifica il clone senza confondere snapshot e backup</title>
+  <desc id="desc">Sei quadri di laboratorio con dialoghi nei fumetti ovali: template e snapshot locali confermati; backup e identità del guest ancora da verificare.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-16-p2-base-v2.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M258 76 L187 142 L310 93 Z"/><ellipse cx="357" cy="54" rx="149" ry="50"/>
+    <path d="M778 76 L726 134 L832 94 Z"/><ellipse cx="850" cy="54" rx="158" ry="50"/>
+    <path d="M1230 76 L1165 107 L1275 93 Z"/><ellipse cx="1350" cy="54" rx="179" ry="50"/>
+    <path d="M263 580 L186 639 L313 598 Z"/><ellipse cx="354" cy="557" rx="151" ry="50"/>
+    <path d="M741 580 L585 649 L783 597 Z"/><ellipse cx="851" cy="557" rx="160" ry="50"/>
+    <path d="M1480 580 L1511 649 L1518 597 Z"/><ellipse cx="1342" cy="557" rx="177" ry="50"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" fill="#081927" text-anchor="middle">
+    <text x="357" y="48"><tspan>Base 230: running.</tspan><tspan x="357" dy="26">local-lvm: 560G liberi.</tspan></text>
+    <text x="850" y="48"><tspan>Pulizia: uninitialized.</tspan><tspan x="850" dy="26">Poi shutdown: stopped.</tspan></text>
+    <text x="1350" y="48"><tspan>Template 230; clone 231</tspan><tspan x="1350" dy="26">completo su local-lvm.</tspan></text>
+    <text x="354" y="551"><tspan>Clone isolato: link_down=1.</tspan><tspan x="354" dy="26">Avvio non prova identità.</tspan></text>
+    <text x="851" y="551"><tspan>pre-update è locale.</tspan><tspan x="851" dy="26">La RAM non è inclusa.</tspan></text>
+    <text x="1342" y="551"><tspan>Due prove locali fatte.</tspan><tspan x="1342" dy="26">Backup e identità: da fare.</tspan></text>
+  </g>
+</svg>

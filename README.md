@@ -3,7 +3,7 @@
 
 # Diario di un Admin Jr. — Proxmox VE + PBS (nuova edizione)
 
-Protótipo interativo **em italiano** dos três primeiros módulos da nova edição. As aulas 01–12 estão jogáveis; o plano curricular completo prevê 48 aulas. O curso anterior `CURSO_PROXMOX_INTERATIVO` permanece independente na porta 4175.
+Protótipo interativo **em italiano** dos quatro primeiros módulos e da primeira aula do módulo LXC. As aulas 01–17 estão jogáveis; o plano curricular completo prevê 48 aulas. O curso anterior `CURSO_PROXMOX_INTERATIVO` permanece independente na porta 4175.
 
 ## Abrir
 
@@ -31,6 +31,11 @@ Também é possível servir apenas esta pasta com `python -m http.server 4177 --
 | 10 | Gestão, gateway e bond | Entender failover active-backup e a dependência do switch |
 | 11 | VLAN e bridge VLAN-aware | Localizar tag 20 errado na VM 202; preservar VLAN 30 server |
 | 12 | Firewall e conectividade | Corrigir a fonte permitida na porta 8006 e testar allow/deny |
+| 13 | Criar uma VM com escolhas conscientes | Confrontar perfil UEFI, ISO, firmware, recursos e bridge antes do boot |
+| 14 | Disco VirtIO e Guest Agent | Diagnosticar agente inativo, aplicar correção simulada e separar IP observado de conectividade testada |
+| 15 | Capacidade: vCPU, memória e espaço | Medir CPU, RAM, swap e disco; ajustar só a RAM e manter a prova de latência pendente |
+| 16 | Template, clone, snapshot e backup | Preparar a base, clonar em rede isolada e separar snapshot local de recuperação externa |
+| 17 | Escolher entre VM e LXC | Classificar três serviços, consultar o inventário LXC e documentar testes pendentes sem criar instâncias |
 
 Cada aula possui dez seções pedagógicas, três questões comentadas, uma decisão técnica, diário de bordo, laboratório simulado com bloqueio de validação prematura e duas pranchas italianas de seis quadros. O progresso e XP ficam no armazenamento local do navegador. **Os comandos do laboratório são simulações educativas; nenhuma configuração real é alterada.**
 
@@ -38,7 +43,7 @@ O laboratório agora mostra, para cada comando, sua finalidade, a função dos a
 
 Ao lado do terminal, **Obiettivi verificabili** mostra quais comandos já foram executados. Clique em um item para preencher o terminal, use **TAB** para completar um comando digitado ou execute `help`/`--help` para ver os comandos do nó. As explicações das questões permanecem abaixo da pergunta e são preservadas ao recarregar a página. Em telas pequenas, o painel de objetivos aparece abaixo do terminal.
 
-As 24 pranchas ativas estão em `assets/`, duas por aula. No módulo 3, as aulas 09–12 usam `aula-XX.png` e `aula-XX-p2-v2.png`: história/conceito na primeira, evidências e decisão na segunda. Após a auditoria de quadros repetidos, a segunda prancha ativa das aulas 01–03 e 05–07 é `aula-XX-p2-hq-v3.png`; a aula 04 mantém `aula-04-p2-hq-v2.png`. As versões antigas permanecem como histórico. O controle geral está em `../PLANO_AUDITORIA_E_MELHORIA_CONTINUA_PRANCHAS.md`.
+As 34 pranchas ativas estão em `assets/`, duas por aula. No módulo 3, as aulas 09–11 usam `aula-XX.png` e `aula-XX-p2-v2.png`; a aula 12 usa o par revisado `aula-12-p1-v3.png` e `aula-12-p2-v4.png`. A aula 13 usa `aula-13-p1-v2.png` e `aula-13-p2-v3.png`; a aula 14 usa `aula-14-p1-v4.png` e `aula-14-p2-v5.png`; a aula 15 usa `aula-15-p1-v4.png` e `aula-15-p2-v3.png`; a aula 16 usa `aula-16-p1-v6.png` e `aula-16-p2-v5.png`; a aula 17 usa `aula-17-p1-v3.png` e `aula-17-p2-v4.png`. As aulas 14–17 usam personagens refeitos a partir do par canônico da aula 01; os pares novos 15–17 foram aprovados por revisor independente após comparação de poses e enquadramentos com aulas vizinhas. As falas usam balões, enquanto quadros sem personagem falante usam cartões narrativos. Após a auditoria de quadros repetidos, a segunda prancha ativa das aulas 01–03 e 05–07 é `aula-XX-p2-hq-v3.png`; a aula 04 mantém `aula-04-p2-hq-v2.png`. As versões antigas permanecem como histórico. O controle geral está em `../PLANO_AUDITORIA_E_MELHORIA_CONTINUA_PRANCHAS.md`.
 
 As duas pranchas de cada aula aparecem logo após **La storia del Senior**. O atalho **Tavole** no início da aula leva diretamente a elas; cada prancha abre ampliada ao clicar.
 
@@ -57,3 +62,5 @@ Execute `npm.cmd test` nesta pasta. O arquivo `VALIDACAO.md` registra as verific
 - [Documentação oficial do Proxmox VE](https://pve.proxmox.com/pve-docs/)
 - [Documentação oficial do PBS](https://pbs.proxmox.com/docs/)
 - [Requisitos e instalação do PBS](https://pbs.proxmox.com/docs/installation.html)
+
+

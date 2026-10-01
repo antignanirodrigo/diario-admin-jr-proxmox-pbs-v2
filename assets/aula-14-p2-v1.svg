@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 14, tavola 2: diagnosi, avvio del Guest Agent e verifica</title>
+  <desc id="desc">Sei quadri riportano le prove iniziali, l'intervento simulato, le prove successive e il test di connettività ancora aperto.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-14-p2-base-v1.png"/>
+  <g fill="#f7fbff" stroke="#061420" stroke-width="4">
+    <rect x="14" y="9" width="475" height="77" rx="4"/><rect x="527" y="9" width="475" height="77" rx="4"/><rect x="1039" y="9" width="475" height="77" rx="4"/>
+    <rect x="14" y="521" width="475" height="77" rx="4"/><rect x="527" y="521" width="475" height="77" rx="4"/><rect x="1039" y="521" width="475" height="77" rx="4"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#081927">
+    <text x="29" y="40"><tspan>1. PVE conferma la VM accesa</tspan><tspan x="29" dy="30">e i dispositivi configurati.</tspan></text>
+    <text x="542" y="40"><tspan>2. Nel guest: IP e disco ci sono,</tspan><tspan x="542" dy="30">ma il servizio è inattivo.</tspan></text>
+    <text x="1054" y="40"><tspan>3. Dopo la diagnosi, avviamo</tspan><tspan x="1054" dy="30">il servizio nel simulatore.</tspan></text>
+    <text x="29" y="552"><tspan>4. Stato attivo nel guest;</tspan><tspan x="29" dy="30">PVE comunica con l'agente.</tspan></text>
+    <text x="542" y="552"><tspan>5. PVE riceve l'interfaccia</tspan><tspan x="542" dy="30">e l'IP tramite l'agente.</tspan></text>
+    <text x="1054" y="552"><tspan>6. L'osservabilità è ripristinata;</tspan><tspan x="1054" dy="30">la rete remota resta da provare.</tspan></text>
+  </g>
+  <g fill="#071b2d" fill-opacity=".94" stroke="#4dc2eb" stroke-width="2">
+    <rect x="15" y="273" width="475" height="218" rx="4"/>
+    <rect x="527" y="257" width="475" height="234" rx="4"/>
+    <rect x="1040" y="322" width="472" height="165" rx="4"/>
+    <rect x="15" y="788" width="475" height="222" rx="4"/>
+    <rect x="527" y="798" width="475" height="212" rx="4"/>
+    <rect x="1040" y="809" width="472" height="194" rx="4"/>
+  </g>
+  <g font-family="Consolas, 'Courier New', monospace" font-size="18" fill="#e8f8ff">
+    <text x="29" y="291" font-size="16"><tspan fill="#65e0ff">pve02$ qm config 211</tspan><tspan x="29" dy="20">name: report-lab</tspan><tspan x="29" dy="20">agent: 1</tspan><tspan x="29" dy="20">scsihw: virtio-scsi-single</tspan><tspan x="29" dy="20">scsi0: local-lvm:vm-211-disk-0,</tspan><tspan x="29" dy="20">       size=40G</tspan><tspan x="29" dy="20">net0: virtio=BC:24:11:21:00:11,</tspan><tspan x="29" dy="20">      bridge=vmbr0</tspan><tspan x="29" dy="20" fill="#65e0ff">pve02$ qm status 211</tspan><tspan x="29" dy="20">status: running</tspan></text>
+    <text x="541" y="281" font-size="16"><tspan fill="#65e0ff">guest211$ systemctl is-active</tspan><tspan x="541" dy="20" fill="#65e0ff">qemu-guest-agent</tspan><tspan x="541" dy="20">inactive</tspan><tspan x="541" dy="20" fill="#65e0ff">guest211$ ip -br addr</tspan><tspan x="541" dy="20">ens18   UP   10.10.10.21/24</tspan><tspan x="541" dy="20" fill="#65e0ff">guest211$ lsblk -o NAME,SIZE,TYPE</tspan><tspan x="541" dy="20">sda   40G disk</tspan><tspan x="541" dy="20">sda1  40G part</tspan><tspan x="541" dy="20" fill="#65e0ff">guest211$ dpkg -s qemu-guest-agent</tspan><tspan x="541" dy="20">Status: install ok installed</tspan></text>
+    <text x="1054" y="352" font-size="18"><tspan fill="#65e0ff">guest211$ systemctl start</tspan><tspan x="1054" dy="25" fill="#65e0ff">qemu-guest-agent</tspan><tspan x="1054" dy="29">Simulatore: servizio avviato.</tspan><tspan x="1054" dy="29">Solo avvio corrente:</tspan><tspan x="1054" dy="25">nessuna abilitazione provata.</tspan></text>
+    <text x="29" y="818" font-size="17"><tspan fill="#65e0ff">guest211$ systemctl show -p</tspan><tspan x="29" dy="22" fill="#65e0ff">ActiveState qemu-guest-agent</tspan><tspan x="29" dy="23">ActiveState=active</tspan><tspan x="29" dy="29" fill="#65e0ff">pve02$ qm guest cmd 211 ping</tspan><tspan x="29" dy="23">Esito simulato: exit 0.</tspan><tspan x="29" dy="27">Il canale agente risponde.</tspan></text>
+    <text x="541" y="827" font-size="17"><tspan fill="#65e0ff">pve02$ qm guest cmd 211</tspan><tspan x="541" dy="22" fill="#65e0ff">network-get-interfaces</tspan><tspan x="541" dy="27">Campi del JSON restituito:</tspan><tspan x="541" dy="25">name: ens18</tspan><tspan x="541" dy="25">ip-address: 10.10.10.21</tspan><tspan x="541" dy="25">ip-address-type: ipv4; prefix: 24</tspan></text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#e8f8ff">
+    <text x="1054" y="848"><tspan font-weight="700" fill="#65e0ff">Ticket INF-114</tspan><tspan x="1054" dy="31">Servizio e IP via agente: verificati</tspan><tspan x="1054" dy="31">nel simulatore.</tspan><tspan x="1054" dy="35">Test di connettività remota:</tspan><tspan x="1054" dy="30" fill="#ffdc7a">ancora pendente.</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 14, tavola 1: il campo IP vuoto non prova una rete guasta</title>
+  <desc id="desc">Sei quadri distinguono il sintomo nella GUI, il controller del disco, il canale Guest Agent e le verifiche ancora da fare nel guest.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-14-p1-base-v1.png"/>
+  <!-- Neutralize the generated green status indicator: service state is not yet proven. -->
+  <circle cx="903" cy="787" r="15" fill="#153550" stroke="#a8bdca" stroke-width="3"/>
+  <text x="903" y="795" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#e2edf4">?</text>
+  <g fill="#f7fbff" stroke="#061420" stroke-width="4">
+    <rect x="14" y="9" width="475" height="77" rx="4"/><rect x="527" y="9" width="475" height="77" rx="4"/><rect x="1039" y="9" width="475" height="77" rx="4"/>
+    <rect x="14" y="521" width="475" height="77" rx="4"/><rect x="527" y="521" width="475" height="77" rx="4"/><rect x="1039" y="521" width="475" height="77" rx="4"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" fill="#081927">
+    <text x="29" y="41"><tspan>1. La VM 211 è accesa, ma PVE</tspan><tspan x="29" dy="30">non mostra il suo indirizzo IP.</tspan></text>
+    <text x="542" y="41"><tspan>2. Disco, Guest Agent e rete</tspan><tspan x="542" dy="30">sono componenti diversi.</tspan></text>
+    <text x="1054" y="41"><tspan>3. In PVE: agent: 1 e controller</tspan><tspan x="1054" dy="30">VirtIO SCSI single.</tspan></text>
+    <text x="29" y="553"><tspan>4. Entriamo nel guest per leggere</tspan><tspan x="29" dy="30">servizio, pacchetto, IP e disco.</tspan></text>
+    <text x="542" y="553"><tspan>5. Un canale configurato in PVE</tspan><tspan x="542" dy="30">non prova il servizio attivo.</tspan></text>
+    <text x="1054" y="553"><tspan>6. Prima raccogliamo le prove;</tspan><tspan x="1054" dy="30">net0 resta invariato.</tspan></text>
+  </g>
+</svg>

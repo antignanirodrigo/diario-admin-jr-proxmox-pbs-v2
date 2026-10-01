@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 14, tavola 1: il campo IP vuoto non prova una rete guasta</title>
+  <desc id="desc">Sei quadri con dialoghi tra Junior e Senior: distinguono disco, Guest Agent e rete e preparano la diagnosi.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-14-p1-base-v2.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M258 78 L180 145 L300 91 Z"/><ellipse cx="357" cy="57" rx="137" ry="53"/>
+    <path d="M738 78 L646 147 L784 92 Z"/><ellipse cx="848" cy="57" rx="153" ry="53"/>
+    <path d="M1260 82 L1416 143 L1254 91 Z"/><ellipse cx="1178" cy="57" rx="145" ry="53"/>
+    <path d="M269 582 L157 650 L306 596 Z"/><ellipse cx="361" cy="557" rx="139" ry="53"/>
+    <path d="M746 579 L626 650 L785 599 Z"/><ellipse cx="852" cy="557" rx="152" ry="53"/>
+    <path d="M1127 590 L1155 652 L1208 594 Z"/><ellipse cx="1180" cy="557" rx="141" ry="53"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="600" fill="#081927" text-anchor="middle">
+    <text x="357" y="51"><tspan>L'IP non appare.</tspan><tspan x="357" dy="27">È un guasto di rete?</tspan></text>
+    <text x="848" y="51"><tspan>Disco, agente e rete</tspan><tspan x="848" dy="27">sono cose diverse.</tspan></text>
+    <text x="1178" y="51"><tspan>agent: 1 è lato PVE.</tspan><tspan x="1178" dy="27">Verifichiamo il guest.</tspan></text>
+    <text x="361" y="551"><tspan>Controllo servizio,</tspan><tspan x="361" dy="27">pacchetto, IP e disco.</tspan></text>
+    <text x="852" y="551"><tspan>Configurato non vuol dire</tspan><tspan x="852" dy="27">servizio attivo.</tspan></text>
+    <text x="1180" y="551"><tspan>Prima le prove.</tspan><tspan x="1180" dy="27">net0 resta invariato.</tspan></text>
+  </g>
+</svg>

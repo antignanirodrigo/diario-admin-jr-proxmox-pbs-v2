@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 16, tavola 2: base pulita, template, clone QA e snapshot locale</title>
+  <desc id="desc">Sei quadri tecnici con dialoghi in italiano. Il clone rimane isolato; backup esterno, ripristino e identità del guest sono pendenti.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-16-p2-base-v1.png"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" fill="#081927" text-anchor="middle">
+    <text x="312" y="46"><tspan>Base 230: running.</tspan><tspan x="312" dy="26">local-lvm: 560G liberi.</tspan></text>
+    <text x="848" y="46"><tspan>Pulizia: uninitialized.</tspan><tspan x="848" dy="26">Poi shutdown: stopped.</tspan></text>
+    <text x="1364" y="46"><tspan>Template 230; clone 231</tspan><tspan x="1364" dy="26">completo su local-lvm.</tspan></text>
+    <text x="322" y="548"><tspan>Clone isolato: link_down=1.</tspan><tspan x="322" dy="26">Avvio non prova identità.</tspan></text>
+    <text x="847" y="548"><tspan>pre-update è locale.</tspan><tspan x="847" dy="26">La RAM non è inclusa.</tspan></text>
+    <text x="1340" y="548"><tspan>Due prove locali fatte.</tspan><tspan x="1340" dy="26">Backup e identità: da fare.</tspan></text>
+  </g>
+</svg>

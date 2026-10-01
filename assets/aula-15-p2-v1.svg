@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 15, tavola 2: prove, modifica RAM e verifica ancora aperta</title>
+  <desc id="desc">Sei quadri: letture del nodo e del guest, esclusione del disco, arresto ordinato, modifica simulata della sola memoria e verifica della capacità senza dichiarare risolta la lentezza.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-15-p2-base-v1.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M270 72 L169 137 L320 91 Z"/><ellipse cx="358" cy="53" rx="148" ry="51"/>
+    <path d="M749 72 L656 136 L796 91 Z"/><ellipse cx="850" cy="53" rx="159" ry="51"/>
+    <path d="M1205 72 L1072 137 L1254 91 Z"/><ellipse cx="1350" cy="53" rx="180" ry="51"/>
+    <path d="M271 578 L173 649 L324 596 Z"/><ellipse cx="358" cy="556" rx="148" ry="51"/>
+    <path d="M787 579 L787 688 L831 597 Z"/><ellipse cx="851" cy="556" rx="158" ry="51"/>
+    <path d="M1210 579 L1125 649 L1260 597 Z"/><ellipse cx="1350" cy="556" rx="180" ry="51"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" fill="#081927" text-anchor="middle">
+    <text x="358" y="47"><tspan>qm config 212: 2 vCPU,</tspan><tspan x="358" dy="26">2048 MiB. 28 GiB available.</tspan></text>
+    <text x="850" y="47"><tspan>free -m e vmstat:</tspan><tspan x="850" dy="26">paging durante il carico.</tspan></text>
+    <text x="1350" y="47"><tspan>df: / al 50%.</tspan><tspan x="1350" dy="26">local-lvm: 560G liberi.</tspan></text>
+    <text x="358" y="550"><tspan>qm shutdown 212.</tspan><tspan x="358" dy="26">Confermo: stopped.</tspan></text>
+    <text x="851" y="550"><tspan>Solo memory e balloon</tspan><tspan x="851" dy="26">a 4096 MiB. Poi avvio.</tspan></text>
+    <text x="1350" y="550"><tspan>MemTotal: circa 3,8 GiB.</tspan><tspan x="1350" dy="26">La latenza? Da misurare.</tspan></text>
+  </g>
+  <g font-family="Consolas, Courier New, monospace" font-size="15" font-weight="700" fill="#d8f4ff">
+    <rect x="1094" y="881" width="405" height="44" rx="6" fill="#051a2e" fill-opacity="0.96" stroke="#5abfff" stroke-width="1.5"/>
+    <text x="1110" y="908">qm config --current + MemTotal</text>
+  </g>
+</svg>

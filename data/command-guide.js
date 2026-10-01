@@ -1,5 +1,7 @@
 import { commandGuideModule02 } from './command-guide-module-02.js';
 import { commandGuideModule03 } from './command-guide-module-03.js';
+import { commandGuideModule04 } from './command-guide-module-04.js';
+import { commandGuideModule05 } from './command-guide-module-05.js';
 
 // Guida didattica: la sintassi di aiuto è verificata nelle documentazioni ufficiali.
 // Gli output del terminale restano esempi simulati, non trascrizioni delle man page.
@@ -26,7 +28,9 @@ export const commandGuide = {
     { input: 'simula-ripristino', purpose: 'Avviare la prova didattica del ripristino.', parts: [['simula-ripristino', 'comando inventato per questo simulatore; NON esiste come comando standard Linux/PVE/PBS'], ['nessuna opzione', 'il prototipo accetta solo questa forma']], read: 'Il risultato confronta 10 minuti di perdita e 75 minuti di fermo con le soglie. Non certifica un ripristino reale.', help: 'simula-ripristino --help', helpOutput: 'SOLO SIMULATORE DIDATTICO\nUso: simula-ripristino\nEsegue la prova fittizia della lezione; non è un comando reale.' }
   ],
   ...commandGuideModule02,
-  ...commandGuideModule03
+  ...commandGuideModule03,
+  ...commandGuideModule04,
+  ...commandGuideModule05
 };
 
 export function getCommandGuide(lessonId, input) {

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 17, tavola 2: verificare le risorse prima di creare</title>
+  <desc id="desc">Il team osserva le liste vuote, classifica A e C come VM, B come candidato LXC, poi registra i controlli ancora pendenti senza creare istanze.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-17-p2-base-v2.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M743 569 L696 665 L841 602 Z"/><ellipse cx="811" cy="542" rx="169" ry="47"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="600" fill="#081927" text-anchor="middle">
+    <text x="811" y="536" font-size="17"><tspan>B resta un candidato.</tspan><tspan x="811" dy="21">Verifichiamo i vincoli.</tspan></text>
+  </g>
+  <g fill="#08243d" stroke="#91dfff" stroke-width="2.3">
+    <rect x="542" y="13" width="240" height="47" rx="8"/>
+    <rect x="542" y="254" width="256" height="43" rx="8"/>
+    <rect x="1092" y="8" width="392" height="47" rx="8"/>
+    <rect x="1075" y="423" width="428" height="57" rx="9"/>
+    <rect x="20" y="412" width="476" height="72" rx="11"/>
+    <rect x="20" y="923" width="476" height="82" rx="11"/>
+    <rect x="1052" y="921" width="470" height="83" rx="11"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="700">
+    <text x="557" y="43" font-size="20">pct list</text>
+    <text x="557" y="282" font-size="20">pveam list local</text>
+    <text x="1289" y="39" font-size="18" text-anchor="middle">A → VM   B → LXC?   C → VM</text>
+    <text x="1289" y="458" font-size="18" text-anchor="middle">Piano, non istanze attive</text>
+    <text x="258" y="436" font-size="14" fill="#7fe0ff" text-anchor="middle">REQUISITI DEL TICKET</text>
+    <text x="258" y="464" font-size="18" text-anchor="middle">Prima leggiamo A, B e C.</text>
+    <text x="258" y="946" font-size="14" fill="#7fe0ff" text-anchor="middle">CANDIDATO B · CONTROLLI PENDENTI</text>
+    <text x="258" y="977" font-size="17" text-anchor="middle">Compatibilità · rete · storage · backup</text>
+    <text x="1287" y="946" font-size="14" fill="#7fe0ff" text-anchor="middle">FINE DELLA RICOGNIZIONE</text>
+    <text x="1287" y="977" font-size="18" text-anchor="middle">Nessuna VM o CT creata.</text>
+  </g>
+  <g font-family="Consolas, monospace" fill="#d9f3ff" font-size="17">
+    <text x="559" y="126">VMID   Status   Lock   Name</text>
+    <text x="559" y="362">NAME                          SIZE</text>
+  </g>
+</svg>

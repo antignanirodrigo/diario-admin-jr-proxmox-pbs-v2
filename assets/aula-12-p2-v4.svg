@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 12, prancha 2: evidência, proposta e testes pendentes</title>
+  <desc id="desc">Seis quadros mostram as quatro evidências, a fonte errada da regra, o risco de acesso universal, a proposta mínima, os dois testes remotos ainda pendentes e o ticket aberto.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-12-p2-base-v3.png"/>
+  <g fill="#f7fbff" stroke="#061420" stroke-width="4">
+    <rect x="14" y="9" width="475" height="77" rx="4"/><rect x="527" y="9" width="475" height="77" rx="4"/><rect x="1039" y="9" width="475" height="77" rx="4"/>
+    <rect x="14" y="521" width="475" height="77" rx="4"/><rect x="527" y="521" width="475" height="77" rx="4"/><rect x="1039" y="521" width="475" height="77" rx="4"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#081927">
+    <text x="29" y="41"><tspan>1. Nome e route: leggiamo</tspan><tspan x="29" dy="31">le uscite, senza dedurre accesso.</tspan></text>
+    <text x="542" y="41"><tspan>2. Il socket ascolta; l’audit</tspan><tspan x="542" dy="31">rivela la fonte permessa errata.</tspan></text>
+    <text x="1054" y="41"><tspan>3. Aprire 8006 a ogni rete</tspan><tspan x="1054" dy="31">aumenterebbe l’esposizione.</tspan></text>
+    <text x="29" y="553"><tspan>4. La richiesta di modifica</tspan><tspan x="29" dy="31">precisa il solo campo da variare.</tspan></text>
+    <text x="542" y="553"><tspan>5. Da testare: accesso gestione</tspan><tspan x="542" dy="31">e diniego dalla rete utenti.</tspan></text>
+    <text x="1054" y="553"><tspan>6. Ticket aperto: modifica e</tspan><tspan x="1054" dy="31">due test remoti ancora pendenti.</tspan></text>
+  </g>
+  <g font-family="Consolas, 'Courier New', monospace" font-size="17" fill="#eaf7ff">
+    <rect x="19" y="335" width="466" height="151" rx="5" fill="#071b2d" fill-opacity=".97" stroke="#4cb8e9" stroke-width="2"/>
+    <text x="31" y="359"><tspan>getent hosts pve02.lab.example</tspan><tspan x="31" dy="25">10.10.10.12 pve02.lab.example</tspan><tspan x="31" dy="25">ip route</tspan><tspan x="31" dy="25">default via 10.10.10.1 dev vmbr0</tspan><tspan x="31" dy="25">10.10.10.0/24 dev vmbr0</tspan></text>
+    <rect x="531" y="259" width="466" height="227" rx="5" fill="#071b2d" fill-opacity=".97" stroke="#4cb8e9" stroke-width="2"/>
+    <text x="543" y="282" font-size="15"><tspan>ss -lnt</tspan><tspan x="543" dy="23">State  Local Address:Port</tspan><tspan x="543" dy="23">LISTEN 0.0.0.0:8006</tspan><tspan x="543" dy="23">LISTEN [::]:8006</tspan><tspan x="543" dy="23">cat /srv/firewall-audit.txt</tspan><tspan x="543" dy="23">PVE firewall: attivo</tspan><tspan x="543" dy="23">Input policy: DROP</tspan><tspan x="543" dy="23">ALLOW TCP 8006 source 10.10.30.0/24 (utenti)</tspan><tspan x="543" dy="23">Rete autorizzata: 10.10.10.0/24 (gestione)</tspan></text>
+    <rect x="19" y="836" width="466" height="164" rx="5" fill="#071b2d" fill-opacity=".97" stroke="#4cb8e9" stroke-width="2"/>
+    <text x="31" y="861"><tspan>Richiesta: sostituire la fonte</tspan><tspan x="31" dy="25">10.10.30.0/24 → 10.10.10.0/24</tspan><tspan x="31" dy="25">Non usare 0.0.0.0/0</tspan><tspan x="31" dy="25">Non disattivare il firewall</tspan><tspan x="31" dy="25">Stato: proposta, non applicata</tspan></text>
+  </g>
+</svg>

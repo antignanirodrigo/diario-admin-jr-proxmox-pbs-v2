@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 15, tavola 1: distinguere CPU, RAM e disco prima di cambiare la VM</title>
+  <desc id="desc">Sei quadri con Junior e Senior: il rallentamento d'importazione porta a misurare le tre risorse, formulare l'ipotesi di pressione RAM e preparare una sola modifica.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-15-p1-base-v1.png"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="670" y="570" width="335" height="328" rx="14" fill="#061b31" stroke="#62ccff" stroke-width="2.5"/>
+    <text x="838" y="652" text-anchor="middle" fill="#e8f7ff" font-size="24" font-weight="700">RAM fissa</text>
+    <text x="693" y="706" fill="#d4efff" font-size="17">memory 2048 MiB</text>
+    <rect x="693" y="719" width="285" height="27" rx="6" fill="#174269" stroke="#8bdcff" stroke-width="1.5"/>
+    <rect x="697" y="723" width="277" height="19" rx="3" fill="#46aaf0"/>
+    <text x="693" y="789" fill="#d4efff" font-size="17">balloon 2048 MiB</text>
+    <rect x="693" y="802" width="285" height="27" rx="6" fill="#174269" stroke="#8bdcff" stroke-width="1.5"/>
+    <rect x="697" y="806" width="277" height="19" rx="3" fill="#46aaf0"/>
+    <text x="838" y="869" text-anchor="middle" fill="#91dbff" font-size="16">Stesso limite, nessun intervallo</text>
+  </g>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M240 75 L170 143 L292 91 Z"/><ellipse cx="348" cy="54" rx="142" ry="49"/>
+    <path d="M733 75 L649 148 L778 92 Z"/><ellipse cx="848" cy="54" rx="156" ry="49"/>
+    <path d="M1110 75 L1048 143 L1160 92 Z"/><ellipse cx="1180" cy="54" rx="145" ry="49"/>
+    <path d="M265 578 L154 649 L304 595 Z"/><ellipse cx="357" cy="556" rx="146" ry="49"/>
+    <path d="M740 579 L628 650 L787 595 Z"/><ellipse cx="848" cy="556" rx="156" ry="49"/>
+    <path d="M1136 582 L1147 650 L1212 596 Z"/><ellipse cx="1181" cy="556" rx="153" ry="49"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="600" fill="#081927" text-anchor="middle">
+    <text x="348" y="48"><tspan>L'importazione è lenta.</tspan><tspan x="348" dy="27">Aumento tutto?</tspan></text>
+    <text x="848" y="48"><tspan>Prima misuriamo CPU,</tspan><tspan x="848" dy="27">RAM e disco separati.</tspan></text>
+    <text x="1180" y="48"><tspan>22 vCPU su 16 thread:</tspan><tspan x="1180" dy="27">non prova contesa.</tspan></text>
+    <text x="357" y="550"><tspan>Solo 120 MiB disponibili;</tspan><tspan x="357" dy="27">swap usata: 1250 MiB.</tspan></text>
+    <text x="848" y="550"><tspan>memory = balloon:</tspan><tspan x="848" dy="27">2048 MiB fissi qui.</tspan></text>
+    <text x="1181" y="550"><tspan>Una modifica: RAM a 4096.</tspan><tspan x="1181" dy="27">Poi misuriamo ancora.</tspan></text>
+  </g>
+</svg>

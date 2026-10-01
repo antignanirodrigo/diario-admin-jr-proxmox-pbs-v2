@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 13, prancha 2: evidenze della VM 210 e correzione proposta</title>
+  <desc id="desc">Le uscite del laboratorio confrontano requisiti, configurazione, ISO e storage. La correzione resta proposta e i test di boot e rete sono pendenti.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-13-p2-base-v2.png"/>
+  <g fill="#f7fbff" stroke="#061420" stroke-width="4">
+    <rect x="14" y="9" width="475" height="77" rx="4"/><rect x="527" y="9" width="475" height="77" rx="4"/><rect x="1039" y="9" width="475" height="77" rx="4"/>
+    <rect x="14" y="521" width="475" height="77" rx="4"/><rect x="527" y="521" width="475" height="77" rx="4"/><rect x="1039" y="521" width="475" height="77" rx="4"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#081927">
+    <text x="29" y="41"><tspan>1. Il profilo interno definisce</tspan><tspan x="29" dy="31">i requisiti della VM 210.</tspan></text>
+    <text x="542" y="41"><tspan>2. La bozza diverge in firmware,</tspan><tspan x="542" dy="31">risorse e bridge di rete.</tspan></text>
+    <text x="1054" y="41"><tspan>3. ISO e storage sono presenti;</tspan><tspan x="1054" dy="31">il boot non è ancora provato.</tspan></text>
+    <text x="29" y="553"><tspan>4. Proponiamo un profilo coerente,</tspan><tspan x="29" dy="31">senza applicarlo nel simulatore.</tspan></text>
+    <text x="542" y="553"><tspan>5. Da provare: avvio dalla ISO</tspan><tspan x="542" dy="31">e rete della VM su vmbr0.</tspan></text>
+    <text x="1054" y="553"><tspan>6. Ticket aperto finché boot,</tspan><tspan x="1054" dy="31">risorse e rete non sono verificati.</tspan></text>
+  </g>
+  <g font-family="Consolas, 'Courier New', monospace" fill="#eaf7ff" xml:space="preserve">
+    <rect x="164" y="144" width="326" height="251" rx="5" fill="#071b2d" fill-opacity=".96" stroke="#4cb8e9" stroke-width="2"/>
+    <text x="173" y="167" font-size="13"><tspan>cat /srv/vm210-requirements.txt</tspan><tspan x="173" dy="23">VM 210: linux-lab interno</tspan><tspan x="173" dy="23">Boot richiesto: UEFI (OVMF)</tspan><tspan x="173" dy="23">  con disco EFI</tspan><tspan x="173" dy="23">Macchina approvata: q35</tspan><tspan x="173" dy="23">CPU: 2 vCPU</tspan><tspan x="173" dy="23">Memoria: 4096 MiB</tspan><tspan x="173" dy="23">Rete: vmbr0</tspan><tspan x="173" dy="23">ISO approvata:</tspan><tspan x="173" dy="23">  local:iso/linux-lab-uefi.iso</tspan></text>
+    <rect x="531" y="183" width="466" height="296" rx="5" fill="#071b2d" fill-opacity=".96" stroke="#4cb8e9" stroke-width="2"/>
+    <text x="543" y="206" font-size="14"><tspan>qm config 210</tspan><tspan x="543" dy="26">name: linux-lab</tspan><tspan x="543" dy="26">bios: seabios</tspan><tspan x="543" dy="26">machine: pc-i440fx</tspan><tspan x="543" dy="26">cores: 1</tspan><tspan x="543" dy="26">memory: 2048</tspan><tspan x="543" dy="26">ide2: local:iso/linux-lab-uefi.iso,media=cdrom</tspan><tspan x="543" dy="26">scsi0: local-lvm:vm-210-disk-0,size=32G</tspan><tspan x="543" dy="26">net0: virtio=BC:24:11:21:00:10,bridge=vmbr9</tspan><tspan x="543" dy="26">boot: order=ide2;scsi0</tspan></text>
+    <rect x="1044" y="315" width="470" height="171" rx="5" fill="#071b2d" fill-opacity=".96" stroke="#4cb8e9" stroke-width="2"/>
+    <text x="1056" y="338" font-size="14"><tspan>cat /srv/iso-inventory.txt</tspan><tspan x="1056" dy="23">local:iso/linux-lab-uefi.iso  presente</tspan><tspan x="1056" dy="23">Checksum e provenienza: verificati dal team immagini</tspan><tspan x="1056" dy="23">pvesm status</tspan><tspan x="1056" dy="23">Name       Type     Status</tspan><tspan x="1056" dy="23">local      dir      active</tspan><tspan x="1056" dy="23">local-lvm  lvmthin  active</tspan></text>
+    <rect x="18" y="824" width="468" height="176" rx="5" fill="#071b2d" fill-opacity=".96" stroke="#4cb8e9" stroke-width="2"/>
+    <text x="30" y="850" font-size="17"><tspan>Proposta per la VM 210</tspan><tspan x="30" dy="26">OVMF + disco EFI; q35</tspan><tspan x="30" dy="26">2 vCPU; 4096 MiB; vmbr0</tspan><tspan x="30" dy="26">ISO approvata invariata</tspan><tspan x="30" dy="26">Stato: non applicata</tspan></text>
+  </g>
+</svg>
+
