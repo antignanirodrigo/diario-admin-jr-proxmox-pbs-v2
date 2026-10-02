@@ -62,7 +62,7 @@ export const lesson16 = {
   validation: 'La base 230 è stata pulita con cloud-init clean --logs --machine-id, /etc/machine-id mostra uninitialized prima dello shutdown, poi la base è stopped e template: 1. Il clone completo 231 su local-lvm ha disco separato e link_down=1; il suo avvio non prova ancora host key, machine-id, hostname o IP unici nel guest. Lo snapshot locale pre-update è presente, senza RAM inclusa e senza prova di coerenza applicativa. Non sono stati eseguiti upgrade, backup esterno o ripristino: nessuna dichiarazione di recuperabilità dopo perdita del nodo è valida.',
   diaryPrompt: 'Registra stato base/template, modalità e storage del clone, isolamento della rete, snapshot pre-update e tre prove ancora mancanti: identità guest, backup esterno e ripristino.',
   closing: 'Hai separato ripetibilità, copia di lavoro, rollback locale e recupero da disastro. La prossima lezione passa ai container LXC e ai limiti rispetto a una VM.',
-  images: ['assets/aula-16-p1-v6.png', 'assets/aula-16-p2-v5.png']
+  images: ['assets/aula-16-p1-v8.png', 'assets/aula-16-p2-v7.png']
 };
 
 

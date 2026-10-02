@@ -1,5 +1,7 @@
 # Ficha dos 12 quadros — aula 17
 
+> **Atualização 02/10/2026:** a tabela abaixo é o storyboard histórico. O par ativo P1 `aula-17-p1-v7.png` / P2 `aula-17-p2-v8.png` trocou quadros repetidos por camada Linux/OCI, inventário vazio e árvore de critérios. As nove falas e o parecer final estão em `AUDITORIA_PRANCHAS_17.md` e nos PNGs ativos.
+
 Ticket INF-117. Três pedidos: A Windows → VM; B serviço Linux simples → **candidato** a LXC não privilegiado; C Docker/OCI → VM recomendada por PVE. Nenhuma VM/CT é criada nesta aula. `pct list` e `pveam list local` retornam tabelas vazias no cenário. O storage `local` tinha apenas 1G disponível na aula 16; a obtenção do template fica para a próxima aula depois de verificação de capacidade.
 
 Referências canônicas de personagem: `assets/aula-01.png`, `assets/aula-01-p2-hq-v3.png`. Comparar com pares ativos das aulas 14–16 para **não** repetir pose, câmera ou função narrativa. Arte 1536×1024, 3×2, balões italianos legíveis atribuídos a personagens. Quadros puramente técnicos usam cartão narrativo distinto de balão. Texto/valores compostos em SVG; arte base sem caracteres gerados.

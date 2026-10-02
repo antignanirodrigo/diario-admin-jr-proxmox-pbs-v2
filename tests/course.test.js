@@ -7,7 +7,7 @@ import { getCommandGuide } from '../data/command-guide.js';
 import { newLessonState, runCommand, autocomplete, selectArchitecture, validateLab, answerQuiz, makeDecision, canComplete, completeLesson } from '../js/simulator.js';
 
 test('Le lezioni attive hanno due tavole e tre domande ciascuna', () => {
-  assert.deepEqual(lessons.map(item => item.id), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]);
+  assert.deepEqual(lessons.map(item => item.id), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]);
   for (const lesson of lessons) {
     assert.equal(lesson.images.length, 2);
     for (const path of lesson.images) assert.ok(existsSync(new URL(`../${path}`, import.meta.url)), `${lesson.id}: prancha ${path}`);
@@ -21,7 +21,7 @@ test('Le lezioni attive hanno due tavole e tre domande ciascuna', () => {
 
 test('Le tavole del nuovo modulo hanno formato coerente e file distinti', () => {
   const hashes = new Set();
-  for (const lesson of lessons.filter(item => item.id >= 9 && item.id <= 18)) {
+  for (const lesson of lessons.filter(item => item.id >= 9 && item.id <= 21)) {
     for (const path of lesson.images) {
       const png = readFileSync(new URL(`../${path}`, import.meta.url));
       assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', `${path}: PNG valido`);

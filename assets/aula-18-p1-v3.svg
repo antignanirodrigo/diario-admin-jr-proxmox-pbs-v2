@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 18, tavola 1: verifiche prima della creazione LXC</title>
+  <desc id="desc">Spazio local, catalogo template, destinazioni separate, mappatura non privilegiata, rete e checklist ancora aperta.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-18-p1-base-v3.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#061827" text-anchor="middle" font-size="19">
+    <text x="395" y="45"><tspan>Local ha solo</tspan><tspan x="395" dy="23">1 GB libero.</tspan></text>
+    <text x="1263" y="47"><tspan>Template su local,</tspan><tspan x="1263" dy="23">rootfs su local-lvm.</tspan></text>
+    <text x="377" y="530"><tspan>Impostiamo</tspan><tspan x="377" dy="23">--unprivileged 1.</tspan></text>
+    <text x="1383" y="530"><tspan>Verifico tutto</tspan><tspan x="1383" dy="23">prima di creare.</tspan></text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#fff" text-anchor="middle" font-size="18">
+    <text x="252" y="450">Misurare il margine di local</text>
+    <text x="768" y="450">Catalogo: Debian 140 MB</text>
+    <text x="1280" y="450">Template e rootfs su storage distinti</text>
+    <text x="252" y="950">CT 301 pianificato non privilegiato</text>
+    <text x="768" y="950">Rete: vmbr0 · 10.10.10.31/24</text>
+    <text x="1280" y="950">Nessun CT ancora creato</text>
+  </g>
+</svg>

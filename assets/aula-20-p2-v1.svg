@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 20, tavola 2: condizioni prima della manutenzione</title>
+  <desc id="desc">Dati bind fuori dallo snapshot, restore non testato, finestra non approvata, utenti remoti non verificati e patch rinviata.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-20-p2-base-v1.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M683 705 L670 737 L715 719 Z"/><ellipse cx="645" cy="690" rx="118" ry="43"/>
+    <path d="M837 705 L865 737 L856 713 Z"/><ellipse cx="874" cy="690" rx="112" ry="43"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#081927" text-anchor="middle" font-size="16">
+    <text x="645" y="684"><tspan>Prima la copia</tspan><tspan x="645" dy="20">del bind.</tspan></text>
+    <text x="874" y="684"><tspan>Poi restore</tspan><tspan x="874" dy="20">e finestra.</tspan></text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="254" y="412" font-size="14" fill="#7fe0ff">FUORI DALLO SNAPSHOT</text>
+    <text x="254" y="442" font-size="18">Bind sul host: copia separata</text>
+    <text x="768" y="412" font-size="14" fill="#7fe0ff">PROVA DI RECUPERO</text>
+    <text x="768" y="442" font-size="18">Restore ancora da eseguire</text>
+    <text x="1280" y="412" font-size="14" fill="#7fe0ff">AUTORIZZAZIONE</text>
+    <text x="1280" y="442" font-size="18">Firma e data assenti</text>
+    <text x="254" y="921" font-size="14" fill="#7fe0ff">PROVA ESTERNA</text>
+    <text x="254" y="950" font-size="18">Utenti remoti non verificati</text>
+    <text x="768" y="921" font-size="14" fill="#7fe0ff">ORDINE PROPOSTO</text>
+    <text x="768" y="950" font-size="18">Copia → restore → finestra → patch</text>
+    <text x="1280" y="921" font-size="14" fill="#7fe0ff">TICKET INF-120</text>
+    <text x="1280" y="950" font-size="18">Aggiornamento rinviato</text>
+  </g>
+</svg>

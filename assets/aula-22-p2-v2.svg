@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 22, tavola 2: inventario e proposta RAIDZ2</title>
+  <desc id="desc">lsblk e zpool status simulati indicano quattro dischi dati, boot separato e nessun pool. RAIDZ2 è solo proposta; verifiche fisiche e copia indipendente restano necessarie.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-22-p2-base-v1.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#071827" text-anchor="middle">
+    <text x="157" y="43"><tspan>Il boot sda</tspan><tspan x="157" dy="22">resta fuori.</tspan></text>
+    <text x="1374" y="50"><tspan>Verifichiamo</tspan><tspan x="1374" dy="22">seriali e SMART.</tspan></text>
+    <text x="766" y="507"><tspan>Propongo RAIDZ2.</tspan><tspan x="766" dy="22">Non lo creo oggi.</tspan></text>
+    <text x="1190" y="510"><tspan>Ridondanza locale</tspan><tspan x="1190" dy="22">non è backup.</tspan></text>
+  </g>
+  <g font-family="Consolas,'Courier New',monospace" font-size="15" font-weight="600" fill="#eaf9ff" xml:space="preserve">
+    <text x="143" y="109">pve03# lsblk -o NAME,SIZE,TYPE,MOUNTPOINT</text>
+    <text x="143" y="150">NAME  SIZE TYPE MOUNTPOINT</text>
+    <text x="143" y="172">sda   256G disk</text>
+    <text x="143" y="194">├─sda1   1G part /boot/efi</text>
+    <text x="143" y="216">└─sda2 255G part /</text>
+    <text x="143" y="247">sdb     1T disk</text>
+    <text x="143" y="269">sdc     1T disk</text>
+    <text x="143" y="291">sdd     1T disk</text>
+    <text x="143" y="313">sde     1T disk</text>
+    <text x="558" y="126">pve03# zpool status</text>
+    <text x="558" y="165">no pools available</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#10243a" text-anchor="middle">
+    <text x="1304" y="305">LAB-01</text>
+    <text x="1365" y="305">LAB-02</text>
+    <text x="1434" y="305">LAB-03</text>
+    <text x="1491" y="305">LAB-04</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#fff">
+    <text x="126" y="594">mirror A · 01 + 02</text>
+    <text x="126" y="816">mirror B · 03 + 04</text>
+    <text x="357" y="594">RAIDZ2 · 01–04</text>
+    <text x="356" y="812">Qualsiasi coppia di guasti</text>
+    <text x="818" y="594">Proposta · nessun zpool create</text>
+    <text x="1215" y="681">Locale</text>
+    <text x="1354" y="745" font-size="12">Copia futura</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="251" y="424">sda boot · sdb–sde dati del caso simulato</text>
+    <text x="768" y="424">tank-lab non esiste ancora</text>
+    <text x="1281" y="424">ID fisici e salute ancora da confermare</text>
+    <text x="251" y="965">Due mirror ≠ due guasti qualsiasi</text>
+    <text x="768" y="965">RAIDZ2 proposto, non creato</text>
+    <text x="1281" y="965">Copia indipendente ancora necessaria</text>
+  </g>
+</svg>

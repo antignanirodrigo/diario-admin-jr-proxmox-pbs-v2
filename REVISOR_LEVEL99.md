@@ -19,6 +19,8 @@ Este é o portão de qualidade do curso Proxmox VE + PBS v2. A cada prancha conc
 4. Júnior ou Sênior descaracterizado; troca de idade, rosto, roupa, traço, paleta ou linguagem visual entre as duas pranchas.
 5. Balão ou legenda cobrindo rosto, terminal ou elemento que seja necessário para entender a lição; equipamentos de datacenter fantasiosos ou anatomicamente incoerentes.
 6. Texto técnico gerado no bitmap com grafia não verificável. Para entrega comercial, exigir composição determinística de comandos e interfaces.
+7. Queda de diálogo sem justificativa narrativa em relação às aulas próximas; cena com personagens explicada apenas por legendas. Contar as falas do par e verificar sua função pedagógica, sem impor balões a quadros puramente técnicos.
+8. Balão construído por elipse e triângulo sobrepostos, cauda longa ou apontada para tela, ícone ou pessoa errada. A fala deve ter um emissor humano identificável e contorno orgânico contínuo.
 
 ## Parecer obrigatório
 

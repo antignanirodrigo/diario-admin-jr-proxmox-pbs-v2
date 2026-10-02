@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 21, tavola 2: inventario e scelta del contenuto</title>
+  <desc id="desc">Stato degli storage, ISO didattica già presente su local, disco VM e rootfs CT su local-lvm. Scelta documentata senza upload, spostamento o creazione di volumi.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-21-p2-base-v1.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#061827" text-anchor="middle">
+    <text x="278" y="48"><tspan>Lo stato indica</tspan><tspan x="278" dy="22">solo la capacità.</tspan></text>
+    <text x="1295" y="46"><tspan>Controlliamo anche</tspan><tspan x="1295" dy="22">i volumi esistenti.</tspan></text>
+    <text x="902" y="518"><tspan>Scelgo local</tspan><tspan x="902" dy="22">per l'ISO.</tspan></text>
+  </g>
+  <g font-family="Consolas,'Courier New',monospace" font-size="15" font-weight="600" fill="#e6f6ff">
+    <text x="67" y="108">pve02# pvesm status</text>
+    <text x="67" y="150">Name       Type     Status</text>
+    <text x="67" y="179">local      dir      active</text>
+    <text x="67" y="208">local-lvm  lvmthin  active</text>
+    <text x="67" y="258">Available (KiB)</text>
+    <text x="67" y="287">local: 73400320</text>
+    <text x="67" y="316">local-lvm: 104857600</text>
+    <text x="554" y="111">pve02# pvesm list local --content iso</text>
+    <text x="554" y="158">Volid</text>
+    <text x="554" y="189">local:iso/debian-12.8.0-amd64-netinst.iso</text>
+    <text x="554" y="230">Format: iso · Type: iso</text>
+    <text x="554" y="261">Size: 692060160</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="251" y="429">pvesm status: pool attivi · capacità osservata</text>
+    <text x="768" y="429">ISO già presente su local</text>
+    <text x="1281" y="429">Volumi VM e CT su local-lvm</text>
+    <text x="251" y="971">images ≠ rootdir: due volumi distinti</text>
+    <text x="768" y="971">Destinazione scelta · nessun upload</text>
+    <text x="1281" y="971">Diagnosi chiusa · configurazione invariata</text>
+  </g>
+</svg>

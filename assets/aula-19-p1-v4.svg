@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 19, tavola 1: diagnosi UID/GID del bind mount</title>
+  <desc id="desc">Fonte host dedicata, mount sola lettura, lettura negata per www-data e mappa effettiva che porta UID 33 a 100033.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-19-p1-base-v3.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#061827" text-anchor="middle" font-size="18">
+    <text x="1383" y="45"><tspan>www-data</tspan><tspan x="1383" dy="22">non legge!</tspan></text>
+    <text x="302" y="526"><tspan>Nel CT usa</tspan><tspan x="302" dy="22">UID e GID 33.</tspan></text>
+    <text x="1199" y="528"><tspan>Non aprire</tspan><tspan x="1199" dy="22">tutto.</tspan></text>
+    <text x="1436" y="529"><tspan>Solo la fonte</tspan><tspan x="1436" dy="22">dedicata.</tspan></text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#fff" text-anchor="middle" font-size="17">
+    <text x="252" y="447">Fonte dedicata · directory 750 · file 640</text>
+    <text x="768" y="447">mp0 bind in sola lettura · ro=1</text>
+    <text x="1280" y="447">Permission denied osservato nel CT</text>
+    <text x="252" y="976">Identità del servizio: www-data 33:33</text>
+    <text x="768" y="976">Mappa effettiva: 0→100000 · 33→100033</text>
+    <text x="1280" y="976">Niente chmod 777; correzione mirata</text>
+  </g>
+  <g font-family="Consolas,monospace" font-weight="700" fill="#dff4ff" font-size="21">
+    <text x="684" y="640">0 → 100000</text>
+    <text x="680" y="805">33 → 100033</text>
+  </g>
+</svg>
+

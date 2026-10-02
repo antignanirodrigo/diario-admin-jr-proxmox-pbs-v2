@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 19, tavola 1: perché il bind mount nega la lettura</title>
+  <desc id="desc">La fonte host è root, mp0 è in sola lettura, www-data UID 33 riceve Permission denied; il mapping effettivo spiega UID 100033 sull’host.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-19-p1-base-v2.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M1152 797 L1101 641 L1217 790 Z"/><ellipse cx="1150" cy="834" rx="105" ry="43"/>
+    <path d="M1409 797 L1458 659 L1486 808 Z"/><ellipse cx="1404" cy="834" rx="111" ry="43"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#081927" text-anchor="middle">
+    <text x="1150" y="830"><tspan>Apriamo</tspan><tspan x="1150" dy="21">tutto?</tspan></text>
+    <text x="1404" y="830"><tspan>No. Solo la</tspan><tspan x="1404" dy="21">fonte dedicata.</tspan></text>
+  </g>
+  <g fill="#0a263e" stroke="#8fe3ff" stroke-width="2.5">
+    <rect x="18" y="380" width="478" height="91" rx="11"/>
+    <rect x="530" y="386" width="478" height="83" rx="11"/>
+    <rect x="1049" y="383" width="468" height="86" rx="11"/>
+    <rect x="19" y="925" width="476" height="82" rx="11"/>
+    <rect x="540" y="499" width="471" height="93" rx="11"/>
+    <rect x="546" y="925" width="470" height="82" rx="11"/>
+    <rect x="1050" y="924" width="470" height="82" rx="11"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#fff" font-weight="700" text-anchor="middle">
+    <text x="257" y="406" font-size="14" fill="#7fe0ff">FONTE HOST DEDICATA</text>
+    <text x="257" y="437" font-size="18">Directory 0:0 750 · file 0:0 640</text>
+    <text x="769" y="412" font-size="14" fill="#7fe0ff">MOUNT CONFIGURATO</text>
+    <text x="769" y="445" font-size="19">mp0: ro=1</text>
+    <text x="1283" y="409" font-size="14" fill="#7fe0ff">PROVA COME www-data</text>
+    <text x="1283" y="440" font-size="20">Permission denied</text>
+    <text x="257" y="951" font-size="14" fill="#7fe0ff">IDENTITÀ NEL CT</text>
+    <text x="257" y="981" font-size="20">UID/GID 33:33</text>
+    <text x="781" y="948" font-size="14" fill="#7fe0ff">MAPPE EFFETTIVE</text>
+    <text x="781" y="979" font-size="19">33 nel CT → 100033 sull’host</text>
+    <text x="1285" y="949" font-size="14" fill="#7fe0ff">PRIMA DI CORREGGERE</text>
+    <text x="1285" y="978" font-size="18">No a chmod 777 e CT privilegiato</text>
+  </g>
+  <g font-family="Consolas,monospace" fill="#d8f2ff" font-size="18" font-weight="700">
+    <text x="557" y="535">uid_map / gid_map</text>
+    <text x="557" y="569">0 → 100000  (65536 ID)</text>
+  </g>
+</svg>
+

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 17, tavola 1: scegliere il confine per tre servizi</title>
+  <desc id="desc">Tre richieste vengono distinte per sistema operativo e isolamento. LXC condivide il kernel Linux, mentre Windows e Docker nel caso vanno in VM. Nessuna istanza è ancora creata.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-17-p1-base-v3.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M1290.9 81.7 A160 42 0 1 1 1312 83.6 C1298.4 94 1263.3 117.4 1245.8 125.4 C1255.1 113 1280 90.1 1290.9 81.7 Z"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="#081927" text-anchor="middle">
+    <text x="1353" y="38"><tspan>Per Windows</tspan><tspan x="1353" dy="23">serve una VM.</tspan></text>
+  </g>
+  <g fill="#0a263e" stroke="#8fe3ff" stroke-width="2.5">
+    <rect x="544" y="9" width="473" height="82" rx="12"/>
+    <rect x="20" y="410" width="476" height="75" rx="12"/>
+    <rect x="21" y="928" width="475" height="78" rx="12"/>
+    <rect x="548" y="515" width="468" height="79" rx="12"/>
+    <rect x="1054" y="930" width="469" height="76" rx="12"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#fff" text-anchor="middle">
+    <text x="780" y="32" font-size="14" font-weight="800" fill="#7fe0ff">DUE CONFINI DIVERSI</text>
+    <text x="780" y="55" font-size="18" font-weight="600"><tspan>LXC usa il kernel Linux del nodo.</tspan><tspan x="780" dy="23">La VM ha un kernel ospite.</tspan></text>
+    <text x="258" y="433" font-size="14" font-weight="800" fill="#7fe0ff">TICKET INF-117</text>
+    <text x="258" y="461" font-size="19" font-weight="600">Tre servizi, tre verifiche.</text>
+    <text x="259" y="950" font-size="14" font-weight="800" fill="#7fe0ff">CANDIDATO B</text>
+    <text x="259" y="979" font-size="19" font-weight="600">LXC non privilegiato: test pendenti.</text>
+    <text x="782" y="538" font-size="14" font-weight="800" fill="#7fe0ff">CASO C</text>
+    <text x="782" y="568" font-size="20" font-weight="600">Docker/OCI dentro una VM QEMU.</text>
+    <text x="1288" y="951" font-size="14" font-weight="800" fill="#7fe0ff">DECISIONE SUL TICKET</text>
+    <text x="1288" y="979" font-size="19" font-weight="600">Nessuna istanza ancora creata.</text>
+  </g>
+</svg>
+

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 21, tavola 2: inventario e scelta del contenuto</title>
+  <desc id="desc">Stato degli storage, ISO didattica già presente su local, disco VM e rootfs CT su local-lvm. Scelta documentata senza upload, spostamento o creazione di volumi.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-21-p2-base-v2.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#061827" text-anchor="middle">
+    <text x="451" y="51"><tspan>Spazio ≠</tspan><tspan x="451" dy="21">contenuto.</tspan></text>
+    <text x="1295" y="46"><tspan>Controlliamo anche</tspan><tspan x="1295" dy="22">i volumi esistenti.</tspan></text>
+    <text x="902" y="518"><tspan>Scelgo local</tspan><tspan x="902" dy="22">per l'ISO.</tspan></text>
+  </g>
+  <g font-family="Consolas,'Courier New',monospace" font-size="12.5" font-weight="700" fill="#e6f6ff" xml:space="preserve">
+    <text x="37" y="111">pve02# pvesm status</text>
+    <text x="37" y="159">Name       Type     Status     Total       Used       Available</text>
+    <text x="37" y="184">local      dir      active     104857600   31457280   73400320</text>
+    <text x="37" y="209">local-lvm  lvmthin  active     209715200   104857600  104857600</text>
+    <text x="550" y="111">pve02# pvesm list local --content iso</text>
+    <text x="550" y="159">Volid                                      Format  Type  Size</text>
+    <text x="550" y="184">local:iso/debian-12.8.0-amd64-netinst.iso iso     iso   692060160</text>
+  </g>
+  <g font-family="Consolas,'Courier New',monospace" font-size="14" font-weight="700" fill="#e9f8ff">
+    <text x="1302" y="272">VM 100 · images</text>
+    <text x="1302" y="381">CT 301 · rootdir</text>
+    <text x="89" y="584">local-lvm:vm-100-disk-0</text>
+    <text x="89" y="747">local-lvm:vm-301-disk-0</text>
+    <text x="696" y="608">local · iso</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#102841">
+    <text x="1180" y="572" font-size="18">INF-121 · diagnosi</text>
+    <text x="1178" y="775" font-size="15">ISO su local</text>
+    <text x="1178" y="800" font-size="15">VM e CT su local-lvm</text>
+    <text x="1178" y="825" font-size="15">Nessun volume spostato</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="251" y="429">pvesm status: pool attivi · capacità osservata</text>
+    <text x="768" y="429">ISO già presente su local</text>
+    <text x="1281" y="429">Volumi VM e CT su local-lvm</text>
+    <text x="251" y="971">images ≠ rootdir: due volumi distinti</text>
+    <text x="768" y="971">Destinazione scelta · nessun upload</text>
+    <text x="1281" y="971">Diagnosi chiusa · configurazione invariata</text>
+  </g>
+</svg>

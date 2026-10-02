@@ -3,7 +3,7 @@
 
 # Diario di un Admin Jr. — Proxmox VE + PBS (nuova edizione)
 
-Protótipo interativo **em italiano** dos quatro primeiros módulos e da primeira aula do módulo LXC. As aulas 01–17 estão jogáveis; o plano curricular completo prevê 48 aulas. O curso anterior `CURSO_PROXMOX_INTERATIVO` permanece independente na porta 4175.
+Protótipo interativo **em italiano** dos cinco primeiros módulos e da aula 21. As aulas 01–21 estão jogáveis; as aulas 22–24 do módulo 6 estão em produção. O plano curricular completo prevê 48 aulas. O curso anterior `CURSO_PROXMOX_INTERATIVO` permanece independente na porta 4175.
 
 ## Abrir
 
@@ -36,6 +36,10 @@ Também é possível servir apenas esta pasta com `python -m http.server 4177 --
 | 15 | Capacidade: vCPU, memória e espaço | Medir CPU, RAM, swap e disco; ajustar só a RAM e manter a prova de latência pendente |
 | 16 | Template, clone, snapshot e backup | Preparar a base, clonar em rede isolada e separar snapshot local de recuperação externa |
 | 17 | Escolher entre VM e LXC | Classificar três serviços, consultar o inventário LXC e documentar testes pendentes sem criar instâncias |
+| 18 | Criar o primeiro LXC | Conferir espaço, baixar template Debian e validar CT não privilegiado com teste HTTP apenas do host |
+| 19 | Bind mount e mapeamento de IDs | Diagnosticar UID/GID efetivos e corrigir acesso restrito aos dados sem abrir permissões globais |
+| 20 | Segurança e manutenção LXC | Simular plano de patch, identificar lacunas de backup/restore e adiar a mudança até cumprir os pré-requisitos |
+| 21 | Tipos de storage e conteúdos permitidos | Distinguir `local` e `local-lvm`, localizar ISO, disco VM e rootfs sem mover dados |
 
 Cada aula possui dez seções pedagógicas, três questões comentadas, uma decisão técnica, diário de bordo, laboratório simulado com bloqueio de validação prematura e duas pranchas italianas de seis quadros. O progresso e XP ficam no armazenamento local do navegador. **Os comandos do laboratório são simulações educativas; nenhuma configuração real é alterada.**
 
@@ -43,7 +47,7 @@ O laboratório agora mostra, para cada comando, sua finalidade, a função dos a
 
 Ao lado do terminal, **Obiettivi verificabili** mostra quais comandos já foram executados. Clique em um item para preencher o terminal, use **TAB** para completar um comando digitado ou execute `help`/`--help` para ver os comandos do nó. As explicações das questões permanecem abaixo da pergunta e são preservadas ao recarregar a página. Em telas pequenas, o painel de objetivos aparece abaixo do terminal.
 
-As 34 pranchas ativas estão em `assets/`, duas por aula. No módulo 3, as aulas 09–11 usam `aula-XX.png` e `aula-XX-p2-v2.png`; a aula 12 usa o par revisado `aula-12-p1-v3.png` e `aula-12-p2-v4.png`. A aula 13 usa `aula-13-p1-v2.png` e `aula-13-p2-v3.png`; a aula 14 usa `aula-14-p1-v4.png` e `aula-14-p2-v5.png`; a aula 15 usa `aula-15-p1-v4.png` e `aula-15-p2-v3.png`; a aula 16 usa `aula-16-p1-v6.png` e `aula-16-p2-v5.png`; a aula 17 usa `aula-17-p1-v3.png` e `aula-17-p2-v4.png`. As aulas 14–17 usam personagens refeitos a partir do par canônico da aula 01; os pares novos 15–17 foram aprovados por revisor independente após comparação de poses e enquadramentos com aulas vizinhas. As falas usam balões, enquanto quadros sem personagem falante usam cartões narrativos. Após a auditoria de quadros repetidos, a segunda prancha ativa das aulas 01–03 e 05–07 é `aula-XX-p2-hq-v3.png`; a aula 04 mantém `aula-04-p2-hq-v2.png`. As versões antigas permanecem como histórico. O controle geral está em `../PLANO_AUDITORIA_E_MELHORIA_CONTINUA_PRANCHAS.md`.
+As 42 pranchas ativas estão em `assets/`, duas por aula. No módulo 3, as aulas 09–11 usam `aula-XX.png` e `aula-XX-p2-v2.png`; a aula 12 usa o par revisado `aula-12-p1-v3.png` e `aula-12-p2-v4.png`. A aula 13 usa `aula-13-p1-v2.png` e `aula-13-p2-v3.png`; a aula 14 usa `aula-14-p1-v4.png` e `aula-14-p2-v5.png`; a aula 15 usa `aula-15-p1-v4.png` e `aula-15-p2-v3.png`. Os pares ativos mais recentes são: **16 P1 v8/P2 v7; 17 P1 v7/P2 v8; 18 P1 v5/P2 v7; 19 P1 v4/P2 v7; 20 P1 v5/P2 v3; 21 P1 v3/P2 v6**. As falas usam balões de contorno contínuo, enquanto quadros sem personagem falante usam cartões narrativos. Os pares 15–20 passaram por revisão independente individual e conjunta, com comparação visual às aulas vizinhas; isso não substitui a auditoria editorial do curso inteiro antes de venda. Após a auditoria de quadros repetidos, a segunda prancha ativa das aulas 01–03 e 05–07 é `aula-XX-p2-hq-v3.png`; a aula 04 mantém `aula-04-p2-hq-v2.png`. As versões antigas permanecem como histórico. O controle geral está em `../PLANO_AUDITORIA_E_MELHORIA_CONTINUA_PRANCHAS.md`.
 
 As duas pranchas de cada aula aparecem logo após **La storia del Senior**. O atalho **Tavole** no início da aula leva diretamente a elas; cada prancha abre ampliada ao clicar.
 
@@ -62,5 +66,6 @@ Execute `npm.cmd test` nesta pasta. O arquivo `VALIDACAO.md` registra as verific
 - [Documentação oficial do Proxmox VE](https://pve.proxmox.com/pve-docs/)
 - [Documentação oficial do PBS](https://pbs.proxmox.com/docs/)
 - [Requisitos e instalação do PBS](https://pbs.proxmox.com/docs/installation.html)
+
 
 

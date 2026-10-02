@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 18, tavola 2: creazione e prova del CT 301</title>
+  <desc id="desc">Il CT non privilegiato è creato, avviato e verificato con Nginx e HTTP soltanto dal nodo host; utenti remoti e ripristino restano non testati.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-18-p2-base-v6.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#061827" text-anchor="middle" font-size="18">
+    <text x="291" y="43"><tspan>Creo il CT 301</tspan><tspan x="291" dy="22">non privilegiato.</tspan></text>
+
+    <text x="281" y="530"><tspan>Ora risulta</tspan><tspan x="281" dy="22">running.</tspan></text>
+    <text x="1239" y="530"><tspan>HTTP solo</tspan><tspan x="1239" dy="22">dall'host.</tspan></text>
+  </g>
+  <g font-family="Consolas,monospace" font-size="17" font-weight="700" fill="#e7f5ff" transform="rotate(7 1280 205)"><text x="1150" y="78">pct config 301</text><text x="1140" y="122">unprivileged: 1</text><text x="1130" y="164">rootfs: local-lvm</text><text x="1120" y="206">size=8G</text><text x="1110" y="248">bridge=vmbr0</text><text x="1100" y="290">ip=10.10.10.31/24</text></g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#fff" text-anchor="middle" font-size="18">
+    <text x="252" y="446">Creazione dopo le verifiche</text>
+    <text x="768" y="446">CT 301 creato, inizialmente stopped</text>
+    <text x="1280" y="446">unprivileged: 1 · rootfs: local-lvm</text>
+    <text x="252" y="947">Avvio e controllo dello stato</text>
+    <text x="768" y="947">Nginx active dentro il CT</text>
+    <text x="1280" y="947">HTTP 200 host→CT; rete utenti non testata</text>
+  </g>
+</svg>
+
+
+

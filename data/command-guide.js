@@ -2,6 +2,7 @@ import { commandGuideModule02 } from './command-guide-module-02.js';
 import { commandGuideModule03 } from './command-guide-module-03.js';
 import { commandGuideModule04 } from './command-guide-module-04.js';
 import { commandGuideModule05 } from './command-guide-module-05.js';
+import { commandGuide21 } from './command-guide-21.js';
 
 // Guida didattica: la sintassi di aiuto è verificata nelle documentazioni ufficiali.
 // Gli output del terminale restano esempi simulati, non trascrizioni delle man page.
@@ -30,7 +31,8 @@ export const commandGuide = {
   ...commandGuideModule02,
   ...commandGuideModule03,
   ...commandGuideModule04,
-  ...commandGuideModule05
+  ...commandGuideModule05,
+  21: commandGuide21
 };
 
 export function getCommandGuide(lessonId, input) {

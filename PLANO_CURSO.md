@@ -1,6 +1,6 @@
 # Plano curricular — Proxmox VE + Proxmox Backup Server
 
-**Estado:** planejamento editorial em português; aulas 01–17 produzidas como protótipo interativo em italiano, com 34 pranchas. Aulas 18–48 permanecem planejadas.  
+**Estado:** planejamento editorial em português; aulas 01–21 produzidas como protótipo interativo em italiano, com 42 pranchas. Aulas 22–24 estão em produção; 25–48 permanecem planejadas.  
 **Carga proposta:** 48 aulas em 12 módulos de 4; 32 aulas de Proxmox VE e infraestrutura, 16 aulas de PBS, backup e recuperação.  
 **Referência técnica inicial:** Proxmox VE 9.2 e Proxmox Backup Server 4.2, conferidos em setembro de 2026. Versões, comandos e telas devem ser reconferidos antes de cada lote de produção.  
 **Formato previsto por aula:** chamado narrativo, conceito, laboratório interativo com consequência observável, decisão técnica, 3 questões comentadas, diário de bordo e **2 pranchas**. A primeira prancha apresenta o incidente; a segunda mostra investigação, correção e evidência de validação. Meta editorial: 96 pranchas e 144 questões.
@@ -9,7 +9,7 @@
 
 **Referência visual aprovada para a produção:** as duas pranchas da aula 1 do NS8 (`../CURSO_NETHSERVER_8/assets/aula-1.png` e `../CURSO_NETHSERVER_8/assets/aula-1-p2.png`), além da continuidade de personagens e cenário ao longo daquele curso. Manter HQ técnica de seis quadros (3 × 2), Júnior e Sênior adultos consistentes, datacenter realista em azul, diagrama e terminal legíveis, progressão incidente → análise → ação → evidência. As novas pranchas de Proxmox/PBS terão balões, painéis e legendas em italiano, sem reaproveitar arte como se fosse uma cena de outro produto.
 
-Esta edição é separada de `CURSO_PROXMOX_INTERATIVO` (40 missões, porta 4175) e de `CURSO_PROXMOX_VE_PBS` (material HTML estático). O protótipo das primeiras oito aulas abre pelo portal 4170 em `/CURSO_PROXMOX_VE_PBS_V2/`. O acervo existente serve como fonte a revisar, não como conteúdo automaticamente aprovado para a nova edição. O número da aula, seu título, o chamado, o laboratório e as pranchas deverão tratar do mesmo problema.
+Esta edição é separada de `CURSO_PROXMOX_INTERATIVO` (40 missões, porta 4175) e de `CURSO_PROXMOX_VE_PBS` (material HTML estático). O protótipo das primeiras 21 aulas abre pelo portal 4170 em `/CURSO_PROXMOX_VE_PBS_V2/`. O acervo existente serve como fonte a revisar, não como conteúdo automaticamente aprovado para a nova edição. O número da aula, seu título, o chamado, o laboratório e as pranchas deverão tratar do mesmo problema.
 
 ## Módulo 1 — Fundamentos e desenho do laboratório (aulas 01–04)
 
@@ -150,3 +150,4 @@ Esta edição é separada de `CURSO_PROXMOX_INTERATIVO` (40 missões, porta 4175
 - [Armazenamento e datastores do PBS](https://pbs.proxmox.com/docs/storage.html)
 - [Gerenciamento de usuários e permissões do PBS](https://pbs.proxmox.com/docs/user-management.html)
 - [Cliente de backup, criptografia e recuperação de chaves](https://pbs.proxmox.com/docs/backup-client.html)
+

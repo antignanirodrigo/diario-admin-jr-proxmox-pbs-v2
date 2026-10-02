@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 20, tavola 2: requisiti mancanti e aggiornamento rinviato</title>
+  <desc id="desc">Lo snapshot locale non protegge il bind; restore, approvazione e test remoto mancano. Il team pianifica i passi e non aggiorna il CT.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-20-p2-base-v3.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#061827" text-anchor="middle" font-size="18">
+    <text x="856" y="48"><tspan>Il restore resta</tspan><tspan x="856" dy="22">da provare.</tspan></text>
+    <text x="298" y="519"><tspan>Gli utenti remoti?</tspan><tspan x="298" dy="22">Test pendente.</tspan></text>
+    <text x="636" y="517"><tspan>Prima le copie</tspan><tspan x="636" dy="22">indipendenti.</tspan></text>
+    <text x="899" y="516"><tspan>Poi restore</tspan><tspan x="899" dy="22">e finestra.</tspan></text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#fff" text-anchor="middle" font-size="17">
+    <text x="252" y="428">Snapshot locale ≠ copia del bind</text>
+    <text x="768" y="428">Restore CT + dati bind non testato</text>
+    <text x="1280" y="428">Finestra senza approvazione</text>
+    <text x="252" y="969">Accesso da utenti remoti non verificato</text>
+    <text x="768" y="969">Piano futuro: copie → restore → finestra → update</text>
+    <text x="1280" y="969">Ticket in pausa · nessun upgrade eseguito</text>
+  </g>
+</svg>

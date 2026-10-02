@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 17, tavola 2: inventario vuoto e scelta condizionata</title>
+  <desc id="desc">Il team legge requisiti e liste vuote, confronta A, B e C, lascia i test aperti e non crea VM o CT.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-17-p2-base-v6.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#061827" text-anchor="middle" font-size="18">
+    <text x="270" y="49"><tspan>Controlliamo</tspan><tspan x="270" dy="22">il catalogo.</tspan></text>
+    <text x="340" y="525"><tspan>Rete, storage</tspan><tspan x="340" dy="22">e backup?</tspan></text>
+    <text x="665" y="522"><tspan>B resta solo</tspan><tspan x="665" dy="22">un candidato.</tspan></text>
+    <text x="905" y="522"><tspan>Test prima</tspan><tspan x="905" dy="22">di creare.</tspan></text>
+  </g>
+  <g font-family="Consolas,monospace" font-size="15" font-weight="700" fill="#eaf6ff">
+    <text x="551" y="81">pct list</text>
+    <text x="560" y="121">VMID  Status  Lock  Name</text>
+    <text x="551" y="262">pveam list local</text>
+    <text x="560" y="310">NAME  SIZE</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#fff" text-anchor="middle" font-size="18">
+    <text x="252" y="445">Inventario prima del provisioning</text>
+    <text x="768" y="445">Inventario CT e template: vuoto</text>
+    <text x="1280" y="445">Kernel · isolamento · compatibilità</text>
+    <text x="252" y="951">Compatibilità e vincoli da verificare</text>
+    <text x="768" y="951">Decisione condizionata ai test</text>
+    <text x="1280" y="951">Nessuna VM o CT creata</text>
+  </g>
+</svg>
+

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 20, tavola 1: audit prima della manutenzione</title>
+  <desc id="desc">Patch richiesta ma non eseguita; configurazione, porta locale, spazio e simulazione sono osservati, mentre finestra e recupero restano pendenti.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-20-p1-base-v3.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#061827" text-anchor="middle" font-size="18">
+    <text x="835" y="47"><tspan>CT non privilegiato,</tspan><tspan x="835" dy="22">mount sola lettura.</tspan></text>
+    <text x="1248" y="48"><tspan>La porta 80</tspan><tspan x="1248" dy="22">ascolta nel CT.</tspan></text>
+    <text x="895" y="518"><tspan>È soltanto</tspan><tspan x="895" dy="22">una simulazione.</tspan></text>
+    <text x="1146" y="518"><tspan>Manca una via</tspan><tspan x="1146" dy="22">di ritorno.</tspan></text>
+    <text x="1410" y="518"><tspan>Rinvio la</tspan><tspan x="1410" dy="22">patch.</tspan></text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#fff" text-anchor="middle" font-size="17">
+    <text x="252" y="429">Ticket INF-120 · patch richiesta</text>
+    <text x="768" y="429">unprivileged=1 · mp0 ro=1</text>
+    <text x="1280" y="429">nginx active · TCP 80 locale al CT</text>
+    <text x="252" y="969">Rootfs: 6 GB disponibili</text>
+    <text x="768" y="969">apt-get -s upgrade: 3 pacchetti, 0 installati</text>
+    <text x="1280" y="969">Finestra non approvata · update rinviato</text>
+  </g>
+</svg>

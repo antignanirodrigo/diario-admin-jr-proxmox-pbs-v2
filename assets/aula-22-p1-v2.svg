@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 22, tavola 1: geometria ZFS proposta</title>
+  <desc id="desc">Quattro dischi dati didattici e boot separato. Due mirror non tollerano sempre due guasti; RAIDZ2 è ipotesi per due guasti qualsiasi. Nessun pool creato.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-22-p1-base-v1.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#071827" text-anchor="middle" font-size="18">
+    <text x="217" y="41"><tspan>Quattro dischi dati.</tspan><tspan x="217" dy="22">Il boot resta fuori.</tspan></text>
+    <text x="651" y="42"><tspan>Il vdev determina</tspan><tspan x="651" dy="22">il rischio.</tspan></text>
+    <text x="233" y="503"><tspan>Due nello stesso</tspan><tspan x="233" dy="22">mirror?</tspan></text>
+    <text x="732" y="514"><tspan>RAIDZ2 regge</tspan><tspan x="732" dy="21">ogni coppia.</tspan></text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#e8f9ff" text-anchor="middle">
+    <text x="340" y="298" font-size="14">LAB-01 · LAB-02 · LAB-03 · LAB-04</text>
+    <text x="360" y="374" font-size="14">BOOT sda: escluso</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" text-anchor="middle">
+    <rect x="785" y="143" width="165" height="145" rx="12" fill="#04172b" fill-opacity=".82" stroke="#75dafa" stroke-width="2"/>
+    <text x="867" y="172" fill="#fff" font-size="18">pool</text>
+    <path d="M867 181v32" stroke="#78d8fa" stroke-width="2"/>
+    <text x="867" y="235" fill="#fff" font-size="18">vdev</text>
+    <path d="M867 245v16" stroke="#78d8fa" stroke-width="2"/>
+    <text x="867" y="281" fill="#fff" font-size="17">dischi</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" text-anchor="middle" fill="#fff" font-size="15">
+    <rect x="1059" y="278" width="193" height="42" rx="8" fill="#052447" fill-opacity=".88" stroke="#b7dff4"/>
+    <rect x="1280" y="278" width="193" height="42" rx="8" fill="#052447" fill-opacity=".88" stroke="#b7dff4"/>
+    <text x="1155" y="305">mirror A · 01 + 02</text>
+    <text x="1376" y="305">mirror B · 03 + 04</text>
+    <text x="1264" y="353">≈ 2 TiB nominali, prima degli overhead</text>
+    <text x="346" y="834">Ipotesi: 01 + 02 guasti nello stesso mirror</text>
+    <text x="821" y="822">un vdev RAIDZ2 · 01 + 02 + 03 + 04</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#eaf8ff">
+    <text x="1280" y="632">Requisito: due dischi qualsiasi</text>
+    <text x="1280" y="674">Confronto ancora in corso</text>
+    <text x="1280" y="716">Nessun pool creato</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="251" y="427">INF-122 · quattro dischi dati simulati</text>
+    <text x="768" y="427">Pool, vdev e dischi: livelli distinti</text>
+    <text x="1281" y="427">Due mirror: rischio dipende dalla coppia</text>
+    <text x="251" y="967">Stesso mirror perso → pool indisponibile</text>
+    <text x="768" y="967">RAIDZ2: doppia parità, progetto proposto</text>
+    <text x="1281" y="967">Verificare requisiti prima di creare</text>
+  </g>
+</svg>

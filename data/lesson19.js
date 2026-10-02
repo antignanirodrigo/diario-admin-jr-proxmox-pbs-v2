@@ -55,5 +55,6 @@ export const lesson19 = {
   validation: 'CT 301 è stato fermato per configurare mp0 e riavviato. www-data (UID/GID 33) ha ricevuto Permission denied con directory host 0:0 0750 e file 0:0 0640. Oltre a subuid/subgid, uid_map e gid_map dentro il CT mostrano 0→100000 per 65536 ID. Dopo aver cambiato soltanto la piccola fonte dedicata in 100033:100033, directory e file sono stati ricontrollati e il test di lettura come www-data termina con successo. mp0 resta ro=1; il contenuto non è stato salvato o ripristinato.',
   diaryPrompt: 'Registra l’offset UID/GID verificato, i permessi prima/dopo, il motivo di ro=1 e come proteggerai separatamente il contenuto del bind mount.',
   closing: 'La lettura funziona senza chmod 777 e senza privilegiare il CT. Nella prossima lezione userai questa evidenza per una decisione sicura di manutenzione e recupero.',
-  images: ['assets/aula-19-p1-v1.png', 'assets/aula-19-p2-v1.png']
+  images: ['assets/aula-19-p1-v4.png', 'assets/aula-19-p2-v7.png']
 };
+

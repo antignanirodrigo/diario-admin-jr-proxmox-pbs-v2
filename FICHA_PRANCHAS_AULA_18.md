@@ -1,5 +1,7 @@
 # Ficha de 12 quadros — aula 18
 
+> **Atualização 02/10/2026:** a tabela abaixo é o planejamento anterior. O par ativo P1 `aula-18-p1-v5.png` / P2 `aula-18-p2-v7.png` substituiu cenas repetidas por checklist físico, ação em rack/tablet, evidência `pct config 301` e mapa do limite host→CT. O parecer final está em `AUDITORIA_PRANCHAS_18.md`.
+
 **Ticket INF-118.** Continuação do candidato B da aula 17. O CT 301 só passa de `absent` a `stopped` depois de conferir espaço e obter template; depois passa a `running`, recebe Nginx e responde HTTP 200 visto de pve02. `local` tinha 1G livre; template didático de 140M é descarregado ali, rootfs de 8G em `local-lvm`. Acesso externo, backup e restauro continuam pendentes. Nome do template é do catálogo simulado, não promessa de versão disponível em PVE real.
 
 **Referências:** `assets/aula-01.png` e `assets/aula-01-p2-hq-v3.png`; comparar composição/pose/função dos três pares anteriores 15–17. 1536 × 1024, seis quadros 3×2 por prancha, balões italianos com caudas corretas e cartões determinísticos para números/comandos. Sem terminal inventado em bitmap. P1 exige parecer independente antes de gerar P2.

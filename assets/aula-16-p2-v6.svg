@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 16, tavola 2: verifica locale e attività ancora aperte</title>
+  <desc id="desc">Sei quadri mostrano la base 230, pulizia dell'identità, template, clone QA isolato, snapshot locale e le verifiche ancora pendenti.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-16-p2-base-v3.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M232.1 88.6 A174 46 0 1 1 253.4 91.7 C237.8 99.3 198.2 115.7 179.4 120.3 C191 110.4 219.9 94.2 232.1 88.6 Z"/>
+    <path d="M804.7 94 A192 46 0 1 1 829.8 91.7 C840.9 98.9 866.8 118.9 876.7 130.2 C858.1 123.6 819.7 103.3 804.7 94 Z"/>
+    <path d="M255 603.8 A219 47 0 1 1 285.7 603.9 C282.6 619.2 272.5 656.6 265 673 C260.1 656.2 255.7 618.9 255 603.8 Z"/>
+    <path d="M1252.9 601.6 A183 47 0 1 1 1277.6 603.2 C1265 615 1232.1 641.9 1215.4 651.8 C1222.7 638 1243.6 611.6 1252.9 601.6 Z"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="600" fill="#081927" text-anchor="middle">
+    <text x="327" y="44"><tspan>Base 230: running.</tspan><tspan x="327" dy="25">560G liberi prima del clone.</tspan></text>
+    <text x="749" y="43"><tspan>Identità pulita.</tspan><tspan x="749" dy="25">Ora shutdown: stopped.</tspan></text>
+    <text x="274" y="550"><tspan>Avvio QA isolato:</tspan><tspan x="274" dy="25">link_down=1.</tspan></text>
+    <text x="1311" y="549"><tspan>Backup e identità guest:</tspan><tspan x="1311" dy="25">verifiche ancora aperte.</tspan></text>
+  </g>
+  <g fill="#0a263e" stroke="#8fe3ff" stroke-width="2.5">
+    <rect x="1064" y="8" width="438" height="84" rx="12"/>
+    <rect x="551" y="509" width="444" height="84" rx="12"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#fff" text-anchor="middle">
+    <text x="1283" y="31" font-size="14" font-weight="800" fill="#7fe0ff">SEQUENZA LOCALE</text>
+    <text x="1283" y="54" font-size="19" font-weight="600"><tspan>Template 230, poi</tspan><tspan x="1283" dy="23">clone completo 231.</tspan></text>
+    <text x="773" y="532" font-size="14" font-weight="800" fill="#7fe0ff">NOTA TECNICA</text>
+    <text x="773" y="555" font-size="19" font-weight="600"><tspan>Snapshot pre-update locale,</tspan><tspan x="773" dy="23">senza RAM e senza backup.</tspan></text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800" fill="#fff" stroke="#0a1d2b" stroke-width="5" paint-order="stroke" text-anchor="middle">
+    <text x="1263" y="160">BASE 230</text><text x="1263" y="305">TEMPLATE 230</text><text x="1263" y="444">CLONE 231</text>
+  </g>
+</svg>

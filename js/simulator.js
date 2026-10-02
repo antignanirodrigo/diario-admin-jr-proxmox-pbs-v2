@@ -88,7 +88,7 @@ export function runCommand(state, host, input) {
   }
   const unmetRuntime = Object.entries(entry.requiresRuntime || {}).filter(([key, value]) => state.runtime[key] !== value);
   if (unmetRuntime.length) {
-    const result = { ok: false, output: 'Lo stato corrente del laboratorio non consente questo comando. Verifica lo stato della VM prima di procedere.' };
+    const result = { ok: false, output: 'Lo stato corrente del laboratorio non consente questo comando. Verifica lo stato del sistema simulato prima di procedere.' };
     state.terminalLog.push(`${host}$ ${command}\n${result.output}`);
     return result;
   }
@@ -122,7 +122,7 @@ export function validateLab(state) {
   const evidence = labEvidence(state);
   state.labVerified = evidence.complete;
   if (evidence.missing.length) return { ok: false, message: `Mancano evidenze dal terminale: ${evidence.missing.join(', ')}.` };
-  if (!evidence.runtimeCorrect) return { ok: false, message: 'Lo stato finale del laboratorio non è ancora quello richiesto. Verifica la VM e ripeti la sequenza necessaria.' };
+  if (!evidence.runtimeCorrect) return { ok: false, message: 'Lo stato finale del laboratorio non è ancora quello richiesto. Verifica il sistema simulato e ripeti la sequenza necessaria.' };
   if (!evidence.choiceCorrect) return { ok: false, message: 'La scelta tecnica non risolve il ticket. Rileggi le misure e riprova.' };
   return { ok: true, message: getLesson(state.id).lab.success };
 }

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 20, tavola 1: audit prima della patch</title>
+  <desc id="desc">Patch pendente, CT non privilegiato e mount ro, servizio e porta locali, 6G disponibili, tre pacchetti soltanto simulati e finestra non approvata.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-20-p1-base-v2.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M645 303 L722 235 L737 313 Z"/><ellipse cx="659" cy="330" rx="135" ry="47"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#081927" text-anchor="middle" font-size="17">
+    <text x="659" y="326"><tspan>Il CT resta</tspan><tspan x="659" dy="21">non privilegiato.</tspan></text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="253" y="406" font-size="14" fill="#7fe0ff">TICKET INF-120</text>
+    <text x="253" y="441" font-size="20">Patch Nginx richiesta</text>
+    <text x="768" y="407" font-size="14" fill="#7fe0ff">CONFIGURAZIONE ATTUALE</text>
+    <text x="768" y="439" font-size="18">unprivileged=1 · mp0 ro=1</text>
+    <text x="1281" y="407" font-size="14" fill="#7fe0ff">OSSERVAZIONE NEL CT</text>
+    <text x="1281" y="439" font-size="18">nginx active · TCP 80 in ascolto</text>
+    <text x="253" y="924" font-size="14" fill="#7fe0ff">SPAZIO ROOTFS</text>
+    <text x="253" y="956" font-size="20">df -h /: 6G disponibili</text>
+    <text x="768" y="922" font-size="14" fill="#7fe0ff">SOLO SIMULAZIONE</text>
+    <text x="768" y="951" font-size="18">3 pacchetti · 0 installati</text>
+    <text x="1281" y="921" font-size="14" fill="#7fe0ff">GATE DI MANUTENZIONE</text>
+    <text x="1281" y="951" font-size="18">Finestra non approvata</text>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 19, tavola 2: correzione mirata e limite del backup</title>
+  <desc id="desc">Solo la fonte dedicata cambia proprietario; www-data passa a leggere, la scrittura resta impedita e i dati bind richiedono protezione separata.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-19-p2-base-v5.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#061827" text-anchor="middle" font-size="18">
+    <text x="1397" y="50"><tspan>Adesso legge</tspan><tspan x="1397" dy="22">come www-data.</tspan></text>
+    <text x="208" y="527"><tspan>Legge, ma</tspan><tspan x="208" dy="22">non scrive.</tspan></text>
+    <text x="1140" y="520"><tspan>I dati bind</tspan><tspan x="1140" dy="22">restano fuori.</tspan></text>
+    <text x="1421" y="522"><tspan>Pianifichiamo</tspan><tspan x="1421" dy="22">copia e restore.</tspan></text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#fff" text-anchor="middle" font-size="17">
+    <text x="252" y="445">chown mirato: solo la fonte dedicata</text>
+    <text x="768" y="445">Directory e file: 100033:100033</text>
+    <text x="1280" y="445">test -r come www-data: exit 0</text>
+    <text x="252" y="973">mp0 ro=1 · scrittura impedita</text>
+    <text x="768" y="973">Schema vzdump: contenuto bind escluso</text>
+    <text x="1280" y="973">Backup separato e restore da pianificare</text>
+  </g>
+  <g font-family="Consolas,monospace" font-size="16" font-weight="700" fill="#eaf6ff">
+    <text x="688" y="160">100033:100033 750</text>
+    <text x="688" y="292">100033:100033 640</text>
+  </g>
+</svg>
+
+

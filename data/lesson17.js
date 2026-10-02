@@ -46,5 +46,7 @@ export const lesson17 = {
   validation: 'Le quattro letture del laboratorio mostrano tre requisiti differenti. Le tabelle vuote di pct list e pveam list local indicano che su pve02 non compare alcun CT né template locale nel caso simulato. La scelta tecnica separa Windows/VM, sito Linux/LXC candidato non privilegiato e Docker/OCI/VM. Non sono stati creati sistemi, né validati servizio, backup o ripristino: la classificazione è un piano, non una messa in produzione.',
   diaryPrompt: 'Registra per A, B e C la tecnologia scelta, il motivo tecnico e la prova che manca. In particolare, spiega perché “più leggero” non basta come criterio.',
   closing: 'Hai scelto il confine adatto a ciascun servizio senza scambiare efficienza per compatibilità. Nella prossima lezione creerai e verificherai il candidato LXC non privilegiato.',
-  images: ['assets/aula-17-p1-v3.png', 'assets/aula-17-p2-v4.png']
+  images: ['assets/aula-17-p1-v7.png', 'assets/aula-17-p2-v8.png']
 };
+
+

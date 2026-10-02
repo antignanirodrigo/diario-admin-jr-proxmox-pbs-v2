@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 17, tavola 1: tre servizi, tre confini</title>
+  <desc id="desc">Dialogo tra Junior e Senior su Windows in VM, Linux candidato LXC e Docker in VM; nessuna istanza ancora creata.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-17-p1-base-v4.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#061827" text-anchor="middle" font-size="18">
+    <text x="260" y="52"><tspan>Tre servizi,</tspan><tspan x="260" dy="22">tre confini?</tspan></text>
+    <text x="1310" y="49"><tspan>Windows?</tspan><tspan x="1310" dy="22">Serve una VM.</tspan></text>
+    <text x="385" y="526"><tspan>B è Linux,</tspan><tspan x="385" dy="22">ma va testato.</tspan></text>
+    <text x="1130" y="522"><tspan>A e C:</tspan><tspan x="1130" dy="22">VM.</tspan></text>
+    <text x="1430" y="522"><tspan>B resta</tspan><tspan x="1430" dy="22">candidato.</tspan></text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="252" y="443" font-size="18">Ticket INF-117 · tre servizi da valutare</text>
+    <text x="768" y="443" font-size="18">LXC: kernel host · VM: kernel guest</text>
+    <text x="1280" y="443" font-size="18">Caso A · Windows richiede VM</text>
+    <text x="252" y="942" font-size="18">Caso B · LXC: test ancora pendenti</text>
+    <text x="768" y="942" font-size="18">Caso C · Docker/OCI in VM QEMU</text>
+    <text x="1280" y="942" font-size="18">Decisione pianificata, 0 istanze create</text>
+  </g>
+</svg>

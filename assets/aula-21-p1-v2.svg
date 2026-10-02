@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 21, tavola 1: perché local-lvm non accetta l'ISO</title>
+  <desc id="desc">Il Junior indaga sul selettore ISO; il Senior distingue tipo e contenuti dello storage. La configurazione mostra che local ammette ISO e local-lvm ammette images e rootdir. Nessun upload o modifica.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-21-p1-base-v2.png"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#061827" text-anchor="middle">
+    <text x="371" y="48"><tspan>Perché non trovo</tspan><tspan x="371" dy="22">local-lvm per l'ISO?</tspan></text>
+    <text x="630" y="44"><tspan>Prima leggiamo</tspan><tspan x="630" dy="22">tipo e contenuti.</tspan></text>
+    <text x="382" y="516"><tspan>Qui vanno dischi</tspan><tspan x="382" dy="22">e rootfs, giusto?</tspan></text>
+    <text x="664" y="518"><tspan>Leggiamo</tspan><tspan x="664" dy="22">storage.cfg.</tspan></text>
+    <text x="1311" y="516"><tspan>Inventario</tspan><tspan x="1311" dy="22">e capacità.</tspan></text>
+  </g>
+  <g font-family="Consolas,'Courier New',monospace" font-size="15" font-weight="600" fill="#d7f2ff">
+    <text x="631" y="631">pve02# cat /etc/pve/storage.cfg</text>
+    <text x="631" y="659">dir: local</text>
+    <text x="647" y="683">path /var/lib/vz</text>
+    <text x="647" y="707">content iso,vztmpl,backup</text>
+    <text x="631" y="741">lvmthin: local-lvm</text>
+    <text x="647" y="765">vgname pve</text>
+    <text x="647" y="789">thinpool data</text>
+    <text x="647" y="813">content images,rootdir</text>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="251" y="428">INF-121 · local-lvm assente dal selettore ISO</text>
+    <text x="768" y="428">Backend e contenuto sono cose diverse</text>
+    <text x="1281" y="428">local: file ISO · local-lvm: volumi</text>
+    <text x="251" y="970">VM e CT: immagini e rootfs</text>
+    <text x="768" y="970">storage.cfg: configurazione letta, non modificata</text>
+    <text x="1281" y="970">Nessun upload: inventario ancora da verificare</text>
+  </g>
+</svg>

@@ -2,6 +2,7 @@ import { module02 } from './lessons-module-02.js';
 import { module03 } from './lessons-module-03.js';
 import { module04 } from './lessons-module-04.js';
 import { module05 } from './lessons-module-05.js';
+import { lesson21 } from './lesson21.js';
 
 export const lessons = [
   {
@@ -212,7 +213,8 @@ export const lessons = [
   ...module02,
   ...module03,
   ...module04,
-  ...module05
+  ...module05,
+  lesson21
 ];
 
 export const getLesson = id => lessons.find(lesson => lesson.id === Number(id));

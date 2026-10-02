@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Aula 19, tavola 2: correggere la fonte e delimitare il backup</title>
+  <desc id="desc">Proprietà 100033:100033 su fonte dedicata, lettura www-data riuscita, mount ro, dati bind esclusi da vzdump e backup separato ancora da fare.</desc>
+  <image x="0" y="0" width="1536" height="1024" xlink:href="aula-19-p2-base-v2.png"/>
+  <g fill="#fffdf8" stroke="#0a1724" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M1392 802 L1442 678 L1483 805 Z"/><ellipse cx="1389" cy="843" rx="123" ry="48"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#081927" text-anchor="middle" font-size="16">
+    <text x="1389" y="837"><tspan>Il bind resta fuori</tspan><tspan x="1389" dy="20">dal backup CT.</tspan></text>
+  </g>
+  <g fill="#0a263e" stroke="#8fe3ff" stroke-width="2.5">
+    <rect x="19" y="393" width="477" height="79" rx="11"/>
+    <rect x="1050" y="387" width="469" height="84" rx="11"/>
+    <rect x="18" y="923" width="479" height="83" rx="11"/>
+    <rect x="543" y="495" width="473" height="76" rx="11"/>
+    <rect x="544" y="926" width="473" height="78" rx="11"/>
+    <rect x="1051" y="922" width="469" height="83" rx="11"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="258" y="417" font-size="14" fill="#7fe0ff">SOLO LA FONTE DEDICATA</text>
+    <text x="258" y="447" font-size="17">chown -R 100033:100033</text>
+    <text x="1284" y="413" font-size="14" fill="#7fe0ff">LETTURA COME www-data</text>
+    <text x="1284" y="443" font-size="18">test -r: exit 0 (simulatore)</text>
+    <text x="258" y="949" font-size="14" fill="#7fe0ff">MOUNT IN SOLA LETTURA</text>
+    <text x="258" y="979" font-size="19">ro=1 · scrittura non consentita</text>
+    <text x="780" y="520" font-size="14" fill="#7fe0ff">PERIMETRO DI vzdump</text>
+    <text x="780" y="550" font-size="19">Contenuto bind fuori da vzdump</text>
+    <text x="780" y="950" font-size="14" fill="#7fe0ff">SCHEMA, NON BACKUP ESEGUITO</text>
+    <text x="780" y="980" font-size="18">Copia host ancora da preparare</text>
+    <text x="1285" y="947" font-size="14" fill="#7fe0ff">PIANO APERTO</text>
+    <text x="1285" y="978" font-size="18">Backup e restore ancora pendenti</text>
+  </g>
+  <g font-family="Consolas,monospace" fill="#e5f6ff" font-size="17" font-weight="700">
+    <text x="669" y="207">100033:100033  750</text>
+    <text x="669" y="310">100033:100033  640</text>
+  </g>
+</svg>
+

@@ -52,5 +52,6 @@ export const lesson18 = {
   validation: 'Nel simulatore local aveva 1G libero e il template da 140M lascia circa 860M; il rootfs da 8G è su local-lvm. pct config 301 mostra unprivileged: 1 e vmbr0/10.10.10.31; il CT passa da stopped a running. Nginx è active e curl dall’host riceve HTTP 200. Nessun utente remoto, backup o ripristino è stato validato.',
   diaryPrompt: 'Annota storage del template e del rootfs, mapping dei privilegi, rete e prova HTTP. Specifica chi ha originato la richiesta e cosa resta fuori dal test.',
   closing: 'Hai avviato e verificato il primo LXC senza confondere running con servizio pronto per tutti. La prossima lezione investiga un bind mount e gli ID mappati.',
-  images: ['assets/aula-18-p1-v2.png', 'assets/aula-18-p2-v2.png']
+  images: ['assets/aula-18-p1-v5.png', 'assets/aula-18-p2-v7.png']
 };
+

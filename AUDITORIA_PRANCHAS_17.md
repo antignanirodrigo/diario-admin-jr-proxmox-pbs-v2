@@ -1,6 +1,6 @@
 # Auditoria independente — aula 17 (01/10/2026)
 
-**Tema:** escolher VM ou LXC para três serviços. **Ativos:** `assets/aula-17-p1-v3.png` e `assets/aula-17-p2-v4.png` (1536 × 1024, seis quadros cada). Revisão independente e somente leitura por revisor Level 99, com comparação explícita com aulas 14–16 e entre as duas pranchas. Aprovação visual do par não equivale a auditoria comercial integral das aulas anteriores.
+**Tema:** escolher VM ou LXC para três serviços. **Ativos em 01/10:** `assets/aula-17-p1-v3.png` e `assets/aula-17-p2-v4.png` (1536 × 1024, seis quadros cada); substituídos em 02/10 pelo par registrado ao final. Revisão independente e somente leitura por revisor Level 99, com comparação explícita com aulas 14–16 e entre as duas pranchas. Aprovação visual do par não equivale a auditoria comercial integral das aulas anteriores.
 
 ## Conteúdo e estado técnico
 
@@ -22,3 +22,7 @@ A revisão técnica reprovou inicialmente respostas simuladas de `pct list` e `p
 **Observação não bloqueante:** o cilindro que representa C em P2-Q3 é genérico; o texto superior e P1-Q5 identificam Docker/OCI. A revisão foi visual e documental em simulador, sem executar operações reais no Proxmox.
 
 **Verificação de ativação:** `npm.cmd test` 26/26; página da aula 17 e ambos PNGs HTTP 200 no portal 4170. A ficha de 12 quadros foi atualizada para registrar as cenas finais.
+
+## Reabertura por diálogo e repetição — 02/10/2026
+
+O par antigo tinha apenas duas falas e balões com cauda artificial. Novas bases foram compostas com balões orgânicos e texto SVG determinístico. A P1 v6 foi reprovada por repetir a mesma triagem visual; **P1 v7** corrigiu Q5 para a camada Linux/OCI e recebeu aprovação individual. A primeira P2 refeita repetia os cartões A/B/C e as três faixas da P1; **P2 v8** trocou Q1 por inventário e Q3 por critérios de kernel/isolamento/compatibilidade. O revisor independente aprovou P2 e o par **`aula-17-p1-v7.png` / `aula-17-p2-v8.png`**, com nove falas e sem VM/CT criada. `npm.cmd test` 29/29; página e PNGs HTTP 200 em 02/10.
